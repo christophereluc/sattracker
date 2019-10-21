@@ -14,23 +14,9 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o8N-He-NNy">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </arscnView>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstAttribute="bottom" secondItem="o8N-He-NNy" secondAttribute="bottom" id="7j9-Cj-CIB"/>
-                            <constraint firstItem="o8N-He-NNy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MbG-Gc-xTG"/>
-                            <constraint firstItem="o8N-He-NNy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="opM-qH-NGL"/>
-                            <constraint firstItem="o8N-He-NNy" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="y44-sn-zOk"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="sceneView" destination="o8N-He-NNy" id="cD5-W3-QFZ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
