@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		107FAD030B267AEDEACCA35F /* libPods-Satellite Tracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 388436E9B1B7DE8ADDBDB2C1 /* libPods-Satellite Tracker.a */; };
 		5D020CBE234A9F660078864C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D020CBD234A9F660078864C /* AppDelegate.swift */; };
 		5D020CC0234A9F660078864C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D020CBF234A9F660078864C /* SceneDelegate.swift */; };
 		5D020CC2234A9F660078864C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D020CC1234A9F660078864C /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B008A74C157C2BAF85932A4 /* Pods-Satellite Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Satellite Tracker.debug.xcconfig"; path = "Target Support Files/Pods-Satellite Tracker/Pods-Satellite Tracker.debug.xcconfig"; sourceTree = "<group>"; };
+		388436E9B1B7DE8ADDBDB2C1 /* libPods-Satellite Tracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Satellite Tracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D020CBA234A9F660078864C /* Satellite Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Satellite Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D020CBD234A9F660078864C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D020CBF234A9F660078864C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		5D020CC6234A9F680078864C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D020CC9234A9F680078864C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D020CCB234A9F680078864C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E9EA2EC786D5F18BC8C61E8 /* Pods-Satellite Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Satellite Tracker.release.xcconfig"; path = "Target Support Files/Pods-Satellite Tracker/Pods-Satellite Tracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				107FAD030B267AEDEACCA35F /* libPods-Satellite Tracker.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				5D020CBC234A9F660078864C /* Satellite Tracker */,
 				5D020CBB234A9F660078864C /* Products */,
+				EE92F946EAC60D4FE64E834A /* Pods */,
+				ED2AFD45655AB76508709A23 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = "Satellite Tracker";
 			sourceTree = "<group>";
 		};
+		ED2AFD45655AB76508709A23 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				388436E9B1B7DE8ADDBDB2C1 /* libPods-Satellite Tracker.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE92F946EAC60D4FE64E834A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1B008A74C157C2BAF85932A4 /* Pods-Satellite Tracker.debug.xcconfig */,
+				5E9EA2EC786D5F18BC8C61E8 /* Pods-Satellite Tracker.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +98,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5D020CCE234A9F680078864C /* Build configuration list for PBXNativeTarget "Satellite Tracker" */;
 			buildPhases = (
+				9C81DA451D07F92243969D5E /* [CP] Check Pods Manifest.lock */,
 				5D020CB6234A9F660078864C /* Sources */,
 				5D020CB7234A9F660078864C /* Frameworks */,
 				5D020CB8234A9F660078864C /* Resources */,
@@ -131,6 +156,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9C81DA451D07F92243969D5E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Satellite Tracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5D020CB6234A9F660078864C /* Sources */ = {
@@ -281,9 +331,11 @@
 		};
 		5D020CCF234A9F680078864C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B008A74C157C2BAF85932A4 /* Pods-Satellite Tracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4P5ZMQ3GXF;
 				INFOPLIST_FILE = "Satellite Tracker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -298,9 +350,11 @@
 		};
 		5D020CD0234A9F680078864C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E9EA2EC786D5F18BC8C61E8 /* Pods-Satellite Tracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4P5ZMQ3GXF;
 				INFOPLIST_FILE = "Satellite Tracker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
