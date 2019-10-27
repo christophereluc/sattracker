@@ -22,5 +22,48 @@
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
         </scene>
+        <!--Modal View Controller-->
+        <scene sceneID="2GM-ms-YUY">
+            <objects>
+                <viewController storyboardIdentifier="modalViewController" title="Modal View Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Sw3-RS-aJT" customClass="ModalViewController" customModule="Satellite_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lrn-qX-veo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="satellite" translatesAutoresizingMaskIntoConstraints="NO" id="chd-vy-2eS">
+                                <rect key="frame" x="87" y="179" width="240" height="170.5"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mz9-e0-476">
+                                <rect key="frame" x="87" y="384" width="240" height="512"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="chd-vy-2eS" firstAttribute="top" secondItem="duE-Sk-QmF" secondAttribute="top" constant="135" id="G2f-dl-XXK"/>
+                            <constraint firstItem="duE-Sk-QmF" firstAttribute="trailing" secondItem="chd-vy-2eS" secondAttribute="trailing" constant="87" id="Vc4-Bf-cGk"/>
+                            <constraint firstAttribute="bottom" secondItem="mz9-e0-476" secondAttribute="bottom" id="Xt8-7C-e0P"/>
+                            <constraint firstItem="mz9-e0-476" firstAttribute="leading" secondItem="duE-Sk-QmF" secondAttribute="leading" constant="87" id="eFf-Jk-3rE"/>
+                            <constraint firstItem="duE-Sk-QmF" firstAttribute="trailing" secondItem="mz9-e0-476" secondAttribute="trailing" constant="87" id="lMp-qv-nUO"/>
+                            <constraint firstItem="mz9-e0-476" firstAttribute="top" secondItem="chd-vy-2eS" secondAttribute="bottom" constant="34.5" id="pAz-ky-2Hx"/>
+                            <constraint firstItem="chd-vy-2eS" firstAttribute="leading" secondItem="duE-Sk-QmF" secondAttribute="leading" constant="87" id="ygJ-fm-jVW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="duE-Sk-QmF"/>
+                    </view>
+                    <connections>
+                        <outlet property="text" destination="mz9-e0-476" id="9oT-W1-3FG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FBt-3e-9WN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="631.8840579710145" y="783.48214285714278"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="satellite" width="170.66667175292969" height="170.66667175292969"/>
+    </resources>
 </document>

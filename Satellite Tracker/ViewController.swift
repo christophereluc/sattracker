@@ -115,11 +115,12 @@ extension ViewController: LNTouchDelegate {
     func locationNodeTouched(node: AnnotationNode) {
                 
         if let tag = node.view?.tag {
-            let alert = UIAlertController(title: "Touched!", message: "Touched node: \(locationData[tag])", preferredStyle: .alert)
             
-            alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "modalViewController") as! ModalViewController
+            newViewController.location = locationData[tag]
             
-            self.present(alert, animated: true)
+            self.present(newViewController, animated: true, completion: nil)
         }
         
     }
