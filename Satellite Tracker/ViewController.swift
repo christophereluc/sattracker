@@ -207,20 +207,10 @@ extension ViewController {
     func buildNode(latitude: CLLocationDegrees, longitude: CLLocationDegrees,
                    altitude: CLLocationDistance, imageName: String) -> LocationAnnotationNode {
         let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-        
-        //Tag will be the index of the inserted CLLocation
-        let tag = locationData.count
-        
         let location = CLLocation(coordinate: coordinate, altitude: altitude)
-        //Store location data now
-        locationData.append(location)
-        
         let image = UIImage(named: "satellite")!
         let imageView = UIImageView(image: image)
-        
-        //Now set tag for retrieval later
-        imageView.tag = tag
-        
+
         let node = LocationAnnotationNode(location: location, view: imageView)
         return setNodeViewAndTag(node: node, location: location, view: imageView)
 
