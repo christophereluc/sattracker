@@ -14,6 +14,8 @@ import CoreLocation
 @available(iOS 11.0, *)
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
+    var locationData: [CLLocation] = []
+    
     let sceneLocationView = SceneLocationView()
     
     let locationManager = CLLocationManager()
@@ -111,13 +113,18 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 @available(iOS 11.0, *)
 extension ViewController: LNTouchDelegate {
     func locationNodeTouched(node: AnnotationNode) {
-        print("Location node touched - \(node)")
+                
+        if let tag = node.view?.tag {
+            
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "modalViewController") as! ModalViewController
+            newViewController.location = locationData[tag]
+            
+            self.present(newViewController, animated: true, completion: nil)
+        }
+        
     }
     
-    
-    func annotationNodeTouched(node: AnnotationNode) {
-        print("AnnotationNode touched \(node)")
-    }
 }
 
 @available(iOS 11.0, *)
@@ -202,7 +209,11 @@ extension ViewController {
         let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         let location = CLLocation(coordinate: coordinate, altitude: altitude)
         let image = UIImage(named: "satellite")!
-        return LocationAnnotationNode(location: location, image: image)
+        let imageView = UIImageView(image: image)
+
+        let node = LocationAnnotationNode(location: location, view: imageView)
+        return setNodeViewAndTag(node: node, location: location, view: imageView)
+
     }
     
     func buildViewNode(latitude: CLLocationDegrees, longitude: CLLocationDegrees,
@@ -213,6 +224,19 @@ extension ViewController {
         label.text = text
         label.backgroundColor = .green
         label.textAlignment = .center
-        return LocationAnnotationNode(location: location, view: label)
+        let node = LocationAnnotationNode(location: location, view: label)
+        return setNodeViewAndTag(node: node, location: location, view: label)
+        
+    }
+    
+    //MARK This is hacky, but is resolved in ARCL 1.2.2, so remove this if library updated before DEC
+    func setNodeViewAndTag(node: LocationAnnotationNode, location: CLLocation, view: UIView) -> LocationAnnotationNode {
+        //Tag will be the index of the inserted CLLocation
+        let tag = locationData.count
+        locationData.append(location)
+        //Now set tag for retrieval later
+        view.tag = tag
+        node.annotationNode.view = view
+        return node
     }
 }

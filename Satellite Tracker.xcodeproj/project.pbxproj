@@ -14,6 +14,7 @@
 		5D020CC5234A9F660078864C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D020CC3234A9F660078864C /* Main.storyboard */; };
 		5D020CC7234A9F680078864C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D020CC6234A9F680078864C /* Assets.xcassets */; };
 		5D020CCA234A9F680078864C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D020CC8234A9F680078864C /* LaunchScreen.storyboard */; };
+		5D687D4F2366339900A8A812 /* SatalliteModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D687D4E2366339900A8A812 /* SatalliteModal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		5D020CC6234A9F680078864C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D020CC9234A9F680078864C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D020CCB234A9F680078864C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D687D4E2366339900A8A812 /* SatalliteModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatalliteModal.swift; sourceTree = "<group>"; };
 		5E9EA2EC786D5F18BC8C61E8 /* Pods-Satellite Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Satellite Tracker.release.xcconfig"; path = "Target Support Files/Pods-Satellite Tracker/Pods-Satellite Tracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +72,7 @@
 				5D020CC6234A9F680078864C /* Assets.xcassets */,
 				5D020CC8234A9F680078864C /* LaunchScreen.storyboard */,
 				5D020CCB234A9F680078864C /* Info.plist */,
+				5D687D4E2366339900A8A812 /* SatalliteModal.swift */,
 			);
 			path = "Satellite Tracker";
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				5D020CC2234A9F660078864C /* ViewController.swift in Sources */,
 				5D020CBE234A9F660078864C /* AppDelegate.swift in Sources */,
 				5D020CC0234A9F660078864C /* SceneDelegate.swift in Sources */,
+				5D687D4F2366339900A8A812 /* SatalliteModal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
