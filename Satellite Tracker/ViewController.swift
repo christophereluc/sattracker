@@ -22,6 +22,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     let image = UIImage(systemName: "mappin.circle.fill")!
     var coordinate: CLLocationCoordinate2D?
     
+    let networkManager = NetworkManager()
+    
     /// Whether to display some debugging data
     /// This currently displays the coordinate of the best location estimate
     /// The initial value is respected
@@ -101,9 +103,23 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+    var calledOnce = false
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locValue:CLLocationCoordinate2D = manager.location!.coordinate
-        print("locations = \(locValue.latitude) \(locValue.longitude)")
+        //print("locations = \(locValue.latitude) \(locValue.longitude)")
+        
+        
+        //MARK just a test to get the API call to occur
+        if calledOnce == false {
+            calledOnce = true
+            networkManager.getNearbySatellites(location: manager.location!, completion: testCompletion(data:error:))
+        }
+    }
+    
+    
+    //MARK Empty function to pass in as completion block to network manager
+    func testCompletion(data: [Any]?, error: String?) {
         
     }
     

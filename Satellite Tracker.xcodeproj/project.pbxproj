@@ -15,6 +15,11 @@
 		5D020CC7234A9F680078864C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D020CC6234A9F680078864C /* Assets.xcassets */; };
 		5D020CCA234A9F680078864C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D020CC8234A9F680078864C /* LaunchScreen.storyboard */; };
 		5D687D4F2366339900A8A812 /* SatalliteModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D687D4E2366339900A8A812 /* SatalliteModal.swift */; };
+		5D85137D236E495C00702BB3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D85137C236E495C00702BB3 /* NetworkManager.swift */; };
+		5D85137F236E499E00702BB3 /* SatelliteEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D85137E236E499E00702BB3 /* SatelliteEndpoint.swift */; };
+		5D851382236E4B0600702BB3 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D851381236E4B0600702BB3 /* EndPointType.swift */; };
+		5D851384236E4B4900702BB3 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D851383236E4B4900702BB3 /* NetworkRouter.swift */; };
+		5D851386236E4D5400702BB3 /* HttpTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D851385236E4D5400702BB3 /* HttpTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +34,11 @@
 		5D020CC9234A9F680078864C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D020CCB234A9F680078864C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D687D4E2366339900A8A812 /* SatalliteModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatalliteModal.swift; sourceTree = "<group>"; };
+		5D85137C236E495C00702BB3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		5D85137E236E499E00702BB3 /* SatelliteEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteEndpoint.swift; sourceTree = "<group>"; };
+		5D851381236E4B0600702BB3 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		5D851383236E4B4900702BB3 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		5D851385236E4D5400702BB3 /* HttpTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpTask.swift; sourceTree = "<group>"; };
 		5E9EA2EC786D5F18BC8C61E8 /* Pods-Satellite Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Satellite Tracker.release.xcconfig"; path = "Target Support Files/Pods-Satellite Tracker/Pods-Satellite Tracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +75,8 @@
 		5D020CBC234A9F660078864C /* Satellite Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				5DCA2667236E991F003C299D /* Models */,
+				5D851370236E0FE600702BB3 /* Networking */,
 				5D020CBD234A9F660078864C /* AppDelegate.swift */,
 				5D020CBF234A9F660078864C /* SceneDelegate.swift */,
 				5D020CC1234A9F660078864C /* ViewController.swift */,
@@ -75,6 +87,49 @@
 				5D687D4E2366339900A8A812 /* SatalliteModal.swift */,
 			);
 			path = "Satellite Tracker";
+			sourceTree = "<group>";
+		};
+		5D851370236E0FE600702BB3 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				5D851380236E4AF500702BB3 /* Service */,
+				5D85137B236E1BB500702BB3 /* Manager */,
+				5D85137A236E1BA600702BB3 /* Endpoint */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		5D85137A236E1BA600702BB3 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				5D85137E236E499E00702BB3 /* SatelliteEndpoint.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		5D85137B236E1BB500702BB3 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				5D85137C236E495C00702BB3 /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		5D851380236E4AF500702BB3 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				5D851381236E4B0600702BB3 /* EndPointType.swift */,
+				5D851383236E4B4900702BB3 /* NetworkRouter.swift */,
+				5D851385236E4D5400702BB3 /* HttpTask.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		5DCA2667236E991F003C299D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		ED2AFD45655AB76508709A23 /* Frameworks */ = {
@@ -190,10 +245,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D851384236E4B4900702BB3 /* NetworkRouter.swift in Sources */,
+				5D851386236E4D5400702BB3 /* HttpTask.swift in Sources */,
 				5D020CC2234A9F660078864C /* ViewController.swift in Sources */,
 				5D020CBE234A9F660078864C /* AppDelegate.swift in Sources */,
-				5D020CC0234A9F660078864C /* SceneDelegate.swift in Sources */,
+                5D020CC0234A9F660078864C /* SceneDelegate.swift in Sources */,
+				5D85137D236E495C00702BB3 /* NetworkManager.swift in Sources */,
 				5D687D4F2366339900A8A812 /* SatalliteModal.swift in Sources */,
+				5D851382236E4B0600702BB3 /* EndPointType.swift in Sources */,
+				5D85137F236E499E00702BB3 /* SatelliteEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
