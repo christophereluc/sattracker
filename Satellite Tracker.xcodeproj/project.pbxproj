@@ -20,6 +20,9 @@
 		5D851382236E4B0600702BB3 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D851381236E4B0600702BB3 /* EndPointType.swift */; };
 		5D851384236E4B4900702BB3 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D851383236E4B4900702BB3 /* NetworkRouter.swift */; };
 		5D851386236E4D5400702BB3 /* HttpTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D851385236E4D5400702BB3 /* HttpTask.swift */; };
+		B6BA793E2373E8100036EE57 /* Satellite.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BA793D2373E8100036EE57 /* Satellite.swift */; };
+		B6BA79402373EB6E0036EE57 /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BA793F2373EB6E0036EE57 /* Beacon.swift */; };
+		B6BA79422373EBE20036EE57 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BA79412373EBE20036EE57 /* Position.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		5D851383236E4B4900702BB3 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
 		5D851385236E4D5400702BB3 /* HttpTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpTask.swift; sourceTree = "<group>"; };
 		5E9EA2EC786D5F18BC8C61E8 /* Pods-Satellite Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Satellite Tracker.release.xcconfig"; path = "Target Support Files/Pods-Satellite Tracker/Pods-Satellite Tracker.release.xcconfig"; sourceTree = "<group>"; };
+		B6BA793D2373E8100036EE57 /* Satellite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Satellite.swift; sourceTree = "<group>"; };
+		B6BA793F2373EB6E0036EE57 /* Beacon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beacon.swift; sourceTree = "<group>"; };
+		B6BA79412373EBE20036EE57 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,8 +134,11 @@
 		5DCA2667236E991F003C299D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B6BA793D2373E8100036EE57 /* Satellite.swift */,
+				B6BA793F2373EB6E0036EE57 /* Beacon.swift */,
+				B6BA79412373EBE20036EE57 /* Position.swift */,
 			);
-			path = Models;
+			name = Models;
 			sourceTree = "<group>";
 		};
 		ED2AFD45655AB76508709A23 /* Frameworks */ = {
@@ -246,13 +255,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D851384236E4B4900702BB3 /* NetworkRouter.swift in Sources */,
+				B6BA793E2373E8100036EE57 /* Satellite.swift in Sources */,
+				B6BA79422373EBE20036EE57 /* Position.swift in Sources */,
 				5D851386236E4D5400702BB3 /* HttpTask.swift in Sources */,
 				5D020CC2234A9F660078864C /* ViewController.swift in Sources */,
 				5D020CBE234A9F660078864C /* AppDelegate.swift in Sources */,
-                5D020CC0234A9F660078864C /* SceneDelegate.swift in Sources */,
+				5D020CC0234A9F660078864C /* SceneDelegate.swift in Sources */,
 				5D85137D236E495C00702BB3 /* NetworkManager.swift in Sources */,
 				5D687D4F2366339900A8A812 /* SatalliteModal.swift in Sources */,
 				5D851382236E4B0600702BB3 /* EndPointType.swift in Sources */,
+				B6BA79402373EB6E0036EE57 /* Beacon.swift in Sources */,
 				5D85137F236E499E00702BB3 /* SatelliteEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,7 +411,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4P5ZMQ3GXF;
+				DEVELOPMENT_TEAM = FPSL38ZW3M;
 				INFOPLIST_FILE = "Satellite Tracker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -418,7 +430,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4P5ZMQ3GXF;
+				DEVELOPMENT_TEAM = FPSL38ZW3M;
 				INFOPLIST_FILE = "Satellite Tracker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
