@@ -14,6 +14,7 @@
 		5D020CC5234A9F660078864C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D020CC3234A9F660078864C /* Main.storyboard */; };
 		5D020CC7234A9F680078864C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D020CC6234A9F680078864C /* Assets.xcassets */; };
 		5D020CCA234A9F680078864C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D020CC8234A9F680078864C /* LaunchScreen.storyboard */; };
+		5D198A4C2374821A0023EEAD /* NearbySatellite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D198A4B2374821A0023EEAD /* NearbySatellite.swift */; };
 		5D687D4F2366339900A8A812 /* SatalliteModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D687D4E2366339900A8A812 /* SatalliteModal.swift */; };
 		5D85137D236E495C00702BB3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D85137C236E495C00702BB3 /* NetworkManager.swift */; };
 		5D85137F236E499E00702BB3 /* SatelliteEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D85137E236E499E00702BB3 /* SatelliteEndpoint.swift */; };
@@ -38,6 +39,7 @@
 		5D020CC6234A9F680078864C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D020CC9234A9F680078864C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D020CCB234A9F680078864C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D198A4B2374821A0023EEAD /* NearbySatellite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbySatellite.swift; sourceTree = "<group>"; };
 		5D687D4E2366339900A8A812 /* SatalliteModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatalliteModal.swift; sourceTree = "<group>"; };
 		5D85137C236E495C00702BB3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		5D85137E236E499E00702BB3 /* SatelliteEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteEndpoint.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				B6BA793F2373EB6E0036EE57 /* Beacon.swift */,
 				B6BA79412373EBE20036EE57 /* Path.swift */,
 				B6BA79432373F9BE0036EE57 /* Position.swift */,
+				5D198A4B2374821A0023EEAD /* NearbySatellite.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				5D85137D236E495C00702BB3 /* NetworkManager.swift in Sources */,
 				5DF2CB16237B92E5004005B1 /* NearbySatellite.swift in Sources */,
 				5D687D4F2366339900A8A812 /* SatalliteModal.swift in Sources */,
+				5D198A4C2374821A0023EEAD /* NearbySatellite.swift in Sources */,
 				5D851382236E4B0600702BB3 /* EndPointType.swift in Sources */,
 				B6BA79402373EB6E0036EE57 /* Beacon.swift in Sources */,
 				5D85137F236E499E00702BB3 /* SatelliteEndpoint.swift in Sources */,
