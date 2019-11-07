@@ -26,6 +26,7 @@ class Router<EndPoint: EndPointType> {
         }catch {
             completion(nil, nil, error)
         }
+        print("route:", route)
         self.task?.resume()
     }
     

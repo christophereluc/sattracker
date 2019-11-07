@@ -128,6 +128,15 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+    func passesData(id: Int) {
+        
+    }
+    
+    func beaconData(ids: [Int]) {
+        networkManager.getBeacons(completion: testCompletion(data:error:))
+    }
+    
+    
     //MARK Empty function to pass in as completion block to network manager
     func testCompletion(data: [Any]?, error: String?) {
         
