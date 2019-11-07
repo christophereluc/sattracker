@@ -29,11 +29,11 @@ enum Direction: String {
 class Path {
     var startAz: Float
     var startAzCompass: Direction
-    var startUTC: NSDate
+    var startUTC: Date
     var maxAz: Float
     var maxAzCompass: Direction
     var maxEl: Float?
-    var maxUTC: NSDate
+    var maxUTC: Date
     var endAz: Float
     var endAzCompass: Direction
     var endUTC: NSDate
@@ -48,18 +48,18 @@ class Path {
         maxUTC: Int,
         endAz: Float,
         endAzCompass: String,
-        endUTC: Int){
+        endUTC: Date){
         
         self.startAz = startAz
         self.startAzCompass = Direction(rawValue: startAzCompass)!
-        self.startUTC = NSDate(timeIntervalSince1970: TimeInterval(startUTC))
+        self.startUTC = Date(timeIntervalSince1970: TimeInterval(startUTC))
         self.maxAz = maxAz
         self.maxAzCompass = Direction(rawValue: maxAzCompass)!
         self.maxEl = maxEl
-        self.maxUTC = NSDate(timeIntervalSince1970: TimeInterval(maxUTC))
+        self.maxUTC = Date(timeIntervalSince1970: TimeInterval(maxUTC))
         self.endAz = endAz
         self.endAzCompass = Direction(rawValue: endAzCompass)!
-        self.endUTC = NSDate(timeIntervalSince1970: TimeInterval(endUTC))
+        self.endUTC = Date(timeIntervalSince1970: TimeInterval(endUTC))
     }
     
 
