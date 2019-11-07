@@ -8,7 +8,6 @@
 import Foundation
 import CoreLocation
 
-
 class Satellite {
     var name: String?
     var designator: String?
@@ -16,10 +15,11 @@ class Satellite {
     var id: Int?
     var location: CLLocation?
     var beacon: Beacon?
-    var position: Position?
+    var Path: Path?
     
     // Initialization
-    init(name: String, launchDate: NSDate, id: Int, location: CLLocation) {
-        <#statements#>
+    init(name: String, launchDate: String, id: Int, location: CLLocation) {
+        self.name = name
+        self.launchDate =  
     }
 }

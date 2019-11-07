@@ -13,4 +13,17 @@ class Beacon {
     var beacon: String?
     var callsign: String?
     var mode: String?
+    
+    init(
+        uplink: String?,
+        downlink: String?,
+        beacon: String?,
+        callsign: String?,
+        mode: String?) {
+        self.uplink = uplink
+        self.downlink = downlink
+        self.beacon = beacon
+        self.callsign = callsign
+        self.mode = mode
+    }
 }

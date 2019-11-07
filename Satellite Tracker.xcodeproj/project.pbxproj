@@ -23,7 +23,8 @@
 		5DF2CB16237B92E5004005B1 /* NearbySatellite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF2CB15237B92E5004005B1 /* NearbySatellite.swift */; };
 		B6BA793E2373E8100036EE57 /* Satellite.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BA793D2373E8100036EE57 /* Satellite.swift */; };
 		B6BA79402373EB6E0036EE57 /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BA793F2373EB6E0036EE57 /* Beacon.swift */; };
-		B6BA79422373EBE20036EE57 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BA79412373EBE20036EE57 /* Position.swift */; };
+		B6BA79422373EBE20036EE57 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BA79412373EBE20036EE57 /* Path.swift */; };
+		B6BA79442373F9BE0036EE57 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BA79432373F9BE0036EE57 /* Position.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +48,8 @@
 		5E9EA2EC786D5F18BC8C61E8 /* Pods-Satellite Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Satellite Tracker.release.xcconfig"; path = "Target Support Files/Pods-Satellite Tracker/Pods-Satellite Tracker.release.xcconfig"; sourceTree = "<group>"; };
 		B6BA793D2373E8100036EE57 /* Satellite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Satellite.swift; sourceTree = "<group>"; };
 		B6BA793F2373EB6E0036EE57 /* Beacon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beacon.swift; sourceTree = "<group>"; };
-		B6BA79412373EBE20036EE57 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
+		B6BA79412373EBE20036EE57 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
+		B6BA79432373F9BE0036EE57 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +141,8 @@
 				5DF2CB15237B92E5004005B1 /* NearbySatellite.swift */,
 				B6BA793D2373E8100036EE57 /* Satellite.swift */,
 				B6BA793F2373EB6E0036EE57 /* Beacon.swift */,
-				B6BA79412373EBE20036EE57 /* Position.swift */,
+				B6BA79412373EBE20036EE57 /* Path.swift */,
+				B6BA79432373F9BE0036EE57 /* Position.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -259,11 +262,12 @@
 			files = (
 				5D851384236E4B4900702BB3 /* NetworkRouter.swift in Sources */,
 				B6BA793E2373E8100036EE57 /* Satellite.swift in Sources */,
-				B6BA79422373EBE20036EE57 /* Position.swift in Sources */,
+				B6BA79422373EBE20036EE57 /* Path.swift in Sources */,
 				5D851386236E4D5400702BB3 /* HttpTask.swift in Sources */,
 				5D020CC2234A9F660078864C /* ViewController.swift in Sources */,
 				5D020CBE234A9F660078864C /* AppDelegate.swift in Sources */,
 				5D020CC0234A9F660078864C /* SceneDelegate.swift in Sources */,
+				B6BA79442373F9BE0036EE57 /* Position.swift in Sources */,
 				5D85137D236E495C00702BB3 /* NetworkManager.swift in Sources */,
 				5DF2CB16237B92E5004005B1 /* NearbySatellite.swift in Sources */,
 				5D687D4F2366339900A8A812 /* SatalliteModal.swift in Sources */,
