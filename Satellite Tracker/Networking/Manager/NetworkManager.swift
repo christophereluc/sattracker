@@ -39,7 +39,6 @@ struct NetworkManager {
                     }
                     do {
                         let responseData = try JSONDecoder().decode(NearbySatelliteResponse.self, from: responseData)
-                        print(responseData)
                         
                         //MARK pass in data object into completion handler
                         completion(responseData ,nil)

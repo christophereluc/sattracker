@@ -136,10 +136,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         networkManager.getBeacons(completion: testCompletion(data:error:))
     }
     
-    
     //MARK Empty function to pass in as completion block to network manager
     func testCompletion(data: [Any]?, error: String?) {
-        
+    }
+    
+    func testCompletionOfNearby(data: NearbySatelliteResponse?, error: String?) {
+        if let data = data {
+            print(data)
+        }
+        else if let error = error {
+            print(error)
+        }
     }
     
 }
