@@ -61,6 +61,4 @@ class Path {
         self.endAzCompass = Direction(rawValue: endAzCompass)!
         self.endUTC = Date(timeIntervalSince1970: TimeInterval(endUTC))
     }
-    
-
 }
