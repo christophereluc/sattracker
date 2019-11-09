@@ -113,7 +113,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         //MARK just a test to get the API call to occur
         if calledOnce == false {
             calledOnce = true
-            networkManager.getNearbySatellites(location: manager.location!, completion: testCompletion(data:error:))
+            networkManager.getNearbySatellites(location: manager.location!, completion: testCompletionOfNearby)
         }
     }
     
@@ -126,10 +126,17 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         networkManager.getBeacons(completion: testCompletion(data:error:))
     }
     
-    
     //MARK Empty function to pass in as completion block to network manager
     func testCompletion(data: [Any]?, error: String?) {
-        
+    }
+    
+    func testCompletionOfNearby(data: NearbySatelliteResponse?, error: String?) {
+        if let data = data {
+            print(data)
+        }
+        else if let error = error {
+            print(error)
+        }
     }
     
 }
