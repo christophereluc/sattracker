@@ -18,7 +18,7 @@ struct NetworkManager {
     let router = Router<SatelliteApi>()
     
     //MARK
-    func getNearbySatellites(location: CLLocation, completion: @escaping (_ data: [Any]?,_ error: String?)->()){
+    func getNearbySatellites(location: CLLocation, completion: @escaping (_ data: NearbySatelliteResponse?, _ error: String?)->()){
         router.request(.nearby(location: location)) { data, response, error in
             //Error isn't nil; therefore network errors
             if error != nil {
@@ -36,12 +36,11 @@ struct NetworkManager {
                         return
                     }
                     do {
-                        //MARK: This is where the json object should be converted into a data model.  Still a TODO
-                        let jsonData = try JSONSerialization.jsonObject(with: responseData, options: .mutableContainers)
-                        print(jsonData)
+                        let responseData = try JSONDecoder().decode(NearbySatelliteResponse.self, from: responseData)
+                        print(responseData)
                         
                         //MARK pass in data object into completion handler
-                        completion(nil ,nil)
+                        completion(responseData ,nil)
                     } catch {
                         completion(nil, "Error decoding data - \(error)")
                     }
