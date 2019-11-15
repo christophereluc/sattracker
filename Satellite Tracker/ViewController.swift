@@ -75,7 +75,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         //        sceneLocationView.delegate = self // Causes an assertionFailure - use the `arViewDelegate` instead:
         sceneLocationView.arViewDelegate = self
         sceneLocationView.locationNodeTouchDelegate = self
-        addSceneModels()
 
         view.addSubview(sceneLocationView)
         sceneLocationView.frame = view.bounds
@@ -113,10 +112,21 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         //MARK just a test to get the API call to occur
         if calledOnce == false {
             calledOnce = true
-            networkManager.getNearbySatellites(location: manager.location!, completion: testCompletion(data:error:))
+            networkManager.getNearbySatellites(location: manager.location!, completion: testCompletionOfNearby)
         }
     }
     
+    func testCompletionOfNearby(data: NearbySatelliteResponse?, error: String?) {
+        if let data = data {
+            //Rejoin main thread since this is called as a result of a bg threaded network call
+            DispatchQueue.main.async {
+                self.addSceneModels(satellites: data.data)
+            }
+        }
+        else if let error = error {
+            print(error)
+        }
+    }
     
     //MARK Empty function to pass in as completion block to network manager
     func testCompletion(data: [Any]?, error: String?) {
@@ -175,11 +185,11 @@ extension ViewController {
     /// Adds the appropriate ARKit models to the scene.  Note: that this won't
     /// do anything until the scene has a `currentLocation`.  It "polls" on that
     /// and when a location is finally discovered, the models are added.
-    func addSceneModels() {
+    func addSceneModels(satellites: [NearbySatellite]) {
         // 1. Don't try to add the models to the scene until we have a current location
         guard sceneLocationView.sceneLocationManager.currentLocation != nil else {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
-                self?.addSceneModels()
+                self?.addSceneModels(satellites: satellites)
             }
             return
         }
@@ -189,8 +199,9 @@ extension ViewController {
         
         
         // 3. If not, then show the
-        buildDemoData().forEach {
-            sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: $0)
+        satellites.forEach { satellite in
+            let node = buildNode(latitude: satellite.satlat, longitude: satellite.satlng, altitude: satellite.satalt)
+            sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: node)
         }
         
         // There are many different ways to add lighting to a scene, but even this mechanism (the absolute simplest)
@@ -199,29 +210,8 @@ extension ViewController {
         
     }
     
-    /// Builds the location annotations for a few random objects, scattered across the country
-    ///
-    /// - Returns: an array of annotation nodes.
-    func buildDemoData() -> [LocationAnnotationNode] {
-        var nodes: [LocationAnnotationNode] = []
-        
-        let spaceNeedle = buildNode(latitude: 47.6205, longitude: -122.3493, altitude: 225, imageName: "pin")
-        nodes.append(spaceNeedle)
-        
-        let empireStateBuilding = buildNode(latitude: 40.7484, longitude: -73.9857, altitude: 14.3, imageName: "pin")
-        nodes.append(empireStateBuilding)
-        
-        let canaryWharf = buildNode(latitude: 51.504607, longitude: -0.019592, altitude: 236, imageName: "pin")
-        nodes.append(canaryWharf)
-        
-        let applePark = buildViewNode(latitude: 37.334807, longitude: -122.009076, altitude: 100, text: "Apple Park")
-        nodes.append(applePark)
-        
-        return nodes
-    }
-    
     func buildNode(latitude: CLLocationDegrees, longitude: CLLocationDegrees,
-                   altitude: CLLocationDistance, imageName: String) -> LocationAnnotationNode {
+                   altitude: CLLocationDistance) -> LocationAnnotationNode {
         let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         let location = CLLocation(coordinate: coordinate, altitude: altitude)
         let image = UIImage(named: "satellite")!

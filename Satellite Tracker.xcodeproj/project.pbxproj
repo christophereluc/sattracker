@@ -20,6 +20,7 @@
 		5D851382236E4B0600702BB3 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D851381236E4B0600702BB3 /* EndPointType.swift */; };
 		5D851384236E4B4900702BB3 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D851383236E4B4900702BB3 /* NetworkRouter.swift */; };
 		5D851386236E4D5400702BB3 /* HttpTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D851385236E4D5400702BB3 /* HttpTask.swift */; };
+		5DF2CB16237B92E5004005B1 /* NearbySatellite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF2CB15237B92E5004005B1 /* NearbySatellite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		5D851381236E4B0600702BB3 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		5D851383236E4B4900702BB3 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
 		5D851385236E4D5400702BB3 /* HttpTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpTask.swift; sourceTree = "<group>"; };
+		5DF2CB15237B92E5004005B1 /* NearbySatellite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbySatellite.swift; sourceTree = "<group>"; };
 		5E9EA2EC786D5F18BC8C61E8 /* Pods-Satellite Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Satellite Tracker.release.xcconfig"; path = "Target Support Files/Pods-Satellite Tracker/Pods-Satellite Tracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,6 +130,7 @@
 		5DCA2667236E991F003C299D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5DF2CB15237B92E5004005B1 /* NearbySatellite.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -249,8 +252,9 @@
 				5D851386236E4D5400702BB3 /* HttpTask.swift in Sources */,
 				5D020CC2234A9F660078864C /* ViewController.swift in Sources */,
 				5D020CBE234A9F660078864C /* AppDelegate.swift in Sources */,
-                5D020CC0234A9F660078864C /* SceneDelegate.swift in Sources */,
+				5D020CC0234A9F660078864C /* SceneDelegate.swift in Sources */,
 				5D85137D236E495C00702BB3 /* NetworkManager.swift in Sources */,
+				5DF2CB16237B92E5004005B1 /* NearbySatellite.swift in Sources */,
 				5D687D4F2366339900A8A812 /* SatalliteModal.swift in Sources */,
 				5D851382236E4B0600702BB3 /* EndPointType.swift in Sources */,
 				5D85137F236E499E00702BB3 /* SatelliteEndpoint.swift in Sources */,
