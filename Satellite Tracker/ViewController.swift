@@ -115,19 +115,21 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             calledOnce = true
             networkManager.getNearbySatellites(location: manager.location!, completion: testCompletionOfNearby)
             networkManager.getBeacons(id: 41465, completion: testBeaconCompletion)
+            networkManager.getPath(id: 41465, location: manager.location!, completion: testPathCompletion)
         }
     }
     
     
-    func passesData(id: Int) {
-        
-    }
-    
-    func beaconData(id: Int) {
-        networkManager.getBeacons(id: id, completion: testBeaconCompletion(data:error:))
-    }
-    
     func testBeaconCompletion(data: BeaconResponse?, error: String?) {
+        if let data = data {
+            print(data)
+        }
+        else if let error = error {
+            print(error)
+        }
+    }
+    
+    func testPathCompletion(data: PathResponse?, error: String?) {
         if let data = data {
             print(data)
         }
