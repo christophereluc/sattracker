@@ -15,17 +15,16 @@ struct SatelliteApiConstants {
     static let LONGITUDE_PARAM = "lng"
     static let LATITUDE_PARAM = "lat"
     static let ID_PARAM = "id"
-    static let IDS_PARAM = "ids"
     static let NEARBY_PATH = "nearby"
     static let PASSES_PATH = "tracking"
-    static let BEACONS_PATH = "update_beacons" // TODO: CHANGE TO /beacons ONCE API IS MERGED
+    static let BEACONS_PATH = "beacons" // TODO: CHANGE TO /beacons ONCE API IS MERGED
 }
 
 //MARK: Enum that lists all possible API endpoints + required data to execute them
 public enum SatelliteApi {
     case nearby(location: CLLocation)
     case radioPasses(id: Int, location: CLLocation)
-    case beacons(ids: [Int])
+    case beacons(id: Int)
 }
 
 //MARK: Extension of the SatelliteApi enum that implements EndpointType protocol.
@@ -60,8 +59,8 @@ extension SatelliteApi: EndPointType {
             return .requestWithParameters(urlParameters: [SatelliteApiConstants.LATITUDE_PARAM : location.coordinate.latitude,
                                                       SatelliteApiConstants.LONGITUDE_PARAM : location.coordinate.longitude,
                                                       SatelliteApiConstants.ALTITUDE_PARAM : location.altitude])
-        case .beacons(let ids):
-            return .requestWithParameters(urlParameters: [SatelliteApiConstants.IDS_PARAM: ids])
+        case .beacons(let id):
+            return .requestWithParameters(urlParameters: [SatelliteApiConstants.ID_PARAM: id])
         }
     }
 }

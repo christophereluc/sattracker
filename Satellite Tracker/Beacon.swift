@@ -17,23 +17,48 @@
 
 import Foundation
 
-class Beacon {
-    var uplink: String?
-    var downlink: String?
-    var beacon: String?
-    var callsign: String?
-    var mode: String?
+
+struct BeaconResponse {
+    let data: Beacon
+}
+
+extension BeaconResponse: Decodable {
+    enum BeaconResponseCodingKeys: String, CodingKey {
+        case data
+    }
     
-    init(
-        uplink: String?,
-        downlink: String?,
-        beacon: String?,
-        callsign: String?,
-        mode: String?) {
-        self.uplink = uplink
-        self.downlink = downlink
-        self.beacon = beacon
-        self.callsign = callsign
-        self.mode = mode
+    init (from decoder: Decoder) throws {
+        let response = try decoder.container(keyedBy: BeaconResponseCodingKeys.self)
+        
+        data = try response.decode(Beacon.self, forKey: .data)
+    }
+}
+
+struct Beacon {
+    let satid: Int
+    let name, uplink, downlink, beacon, callsign, mode: String?
+}
+
+extension Beacon: Decodable {
+    enum BeaconKeys: String, CodingKey {
+        case name
+        case satid
+        case uplink
+        case downlink
+        case beacon
+        case callsign
+        case mode
+    }
+    
+    init (from decoder: Decoder) throws {
+        let beac = try decoder.container(keyedBy: BeaconKeys.self)
+        
+        name = try beac.decode(String.self, forKey: .name)
+        satid = try beac.decode(Int.self, forKey: .satid)
+        uplink = try beac.decode(String.self, forKey: .uplink)
+        downlink = try beac.decode(String.self, forKey: .downlink)
+        beacon = try beac.decode(String.self, forKey: .beacon)
+        callsign = try beac.decode(String.self, forKey: .callsign)
+        mode = try beac.decode(String.self, forKey: .mode)
     }
 }
