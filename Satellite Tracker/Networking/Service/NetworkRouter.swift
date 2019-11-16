@@ -26,6 +26,7 @@ class Router<EndPoint: EndPointType> {
         }catch {
             completion(nil, nil, error)
         }
+        print("route:", route)
         self.task?.resume()
     }
     
@@ -79,6 +80,6 @@ extension Router {
         if urlRequest.value(forHTTPHeaderField: "Content-Type") == nil {
             urlRequest.setValue("application/x-www-form-urlencoded; charset=utf-8", forHTTPHeaderField: "Content-Type")
         }
-        
+        print("MAKING REQUEST", urlRequest.url)
     }
 }

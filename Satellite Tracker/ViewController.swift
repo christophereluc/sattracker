@@ -113,6 +113,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         if calledOnce == false {
             calledOnce = true
             networkManager.getNearbySatellites(location: manager.location!, completion: testCompletionOfNearby)
+            networkManager.getBeacons(id: 41465, completion: testBeaconCompletion)
+            networkManager.getPath(id: 41465, location: manager.location!, completion: testPathCompletion)
         }
     }
     
@@ -128,9 +130,26 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+    func testBeaconCompletion(data: BeaconResponse?, error: String?) {
+        if let data = data {
+            print(data)
+        }
+        else if let error = error {
+            print(error)
+        }
+    }
+    
+    func testPathCompletion(data: PathResponse?, error: String?) {
+        if let data = data {
+            print(data)
+        }
+        else if let error = error {
+            print(error)
+        }
+    }
+    
     //MARK Empty function to pass in as completion block to network manager
     func testCompletion(data: [Any]?, error: String?) {
-        
     }
     
 }
