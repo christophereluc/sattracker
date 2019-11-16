@@ -22,9 +22,8 @@
 		5D851384236E4B4900702BB3 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D851383236E4B4900702BB3 /* NetworkRouter.swift */; };
 		5D851386236E4D5400702BB3 /* HttpTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D851385236E4D5400702BB3 /* HttpTask.swift */; };
 		5DF2CB16237B92E5004005B1 /* NearbySatellite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF2CB15237B92E5004005B1 /* NearbySatellite.swift */; };
-		B6BA793E2373E8100036EE57 /* Satellite.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BA793D2373E8100036EE57 /* Satellite.swift */; };
 		B6BA79402373EB6E0036EE57 /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BA793F2373EB6E0036EE57 /* Beacon.swift */; };
-		B6BA79422373EBE20036EE57 /* Pass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BA79412373EBE20036EE57 /* Pass.swift */; };
+		B6BA79422373EBE20036EE57 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BA79412373EBE20036EE57 /* Path.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,7 +47,7 @@
 		5DF2CB15237B92E5004005B1 /* NearbySatellite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbySatellite.swift; sourceTree = "<group>"; };
 		5E9EA2EC786D5F18BC8C61E8 /* Pods-Satellite Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Satellite Tracker.release.xcconfig"; path = "Target Support Files/Pods-Satellite Tracker/Pods-Satellite Tracker.release.xcconfig"; sourceTree = "<group>"; };
 		B6BA793F2373EB6E0036EE57 /* Beacon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beacon.swift; sourceTree = "<group>"; };
-		B6BA79412373EBE20036EE57 /* Pass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pass.swift; sourceTree = "<group>"; };
+		B6BA79412373EBE20036EE57 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,9 +137,8 @@
 			isa = PBXGroup;
 			children = (
 				5DF2CB15237B92E5004005B1 /* NearbySatellite.swift */,
-				B6BA793D2373E8100036EE57 /* Satellite.swift */,
 				B6BA793F2373EB6E0036EE57 /* Beacon.swift */,
-				B6BA79412373EBE20036EE57 /* Pass.swift */,
+				B6BA79412373EBE20036EE57 /* Path.swift */,
 				5D198A4B2374821A0023EEAD /* NearbySatellite.swift */,
 			);
 			name = Models;
@@ -260,7 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D851384236E4B4900702BB3 /* NetworkRouter.swift in Sources */,
-				B6BA79422373EBE20036EE57 /* Pass.swift in Sources */,
+				B6BA79422373EBE20036EE57 /* Path.swift in Sources */,
 				5D851386236E4D5400702BB3 /* HttpTask.swift in Sources */,
 				5D020CC2234A9F660078864C /* ViewController.swift in Sources */,
 				5D020CBE234A9F660078864C /* AppDelegate.swift in Sources */,
@@ -417,7 +415,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FPSL38ZW3M;
+				DEVELOPMENT_TEAM = 4P5ZMQ3GXF;
 				INFOPLIST_FILE = "Satellite Tracker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
