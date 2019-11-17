@@ -118,11 +118,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
-    func testCompletionOfNearby(data: NearbySatelliteResponse?, error: String?) {
+    func testCompletionOfNearby(data: NearbySatellites?, error: String?) {
         if let data = data {
             //Rejoin main thread since this is called as a result of a bg threaded network call
             DispatchQueue.main.async {
-                self.addSceneModels(satellites: data.data)
+                self.addSceneModels(satellites: data.satellites)
+                if let iss = data.iss {
+                    self.addSceneModels(satellites: [iss])
+                }
             }
         }
         else if let error = error {

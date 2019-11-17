@@ -9,7 +9,7 @@ import Foundation
 
 
 struct NearbySatelliteResponse {
-    let data: [NearbySatellite]
+    let data: NearbySatellites
 }
 
 extension NearbySatelliteResponse: Decodable {
@@ -20,7 +20,26 @@ extension NearbySatelliteResponse: Decodable {
     init (from decoder: Decoder) throws {
         let response = try decoder.container(keyedBy: NearbySatelliteResponseCodingKeys.self)
         
-        data = try response.decode([NearbySatellite].self, forKey: .data)
+        data = try response.decode(NearbySatellites.self, forKey: .data)
+    }
+}
+
+struct NearbySatellites {
+    let satellites: [NearbySatellite]
+    let iss: NearbySatellite?
+}
+
+extension NearbySatellites: Decodable {
+    enum NearbySatellitesCodingKeys: String, CodingKey {
+        case satellites
+        case iss
+    }
+    
+    init (from decoder: Decoder) throws {
+        let response = try decoder.container(keyedBy: NearbySatellitesCodingKeys.self)
+        
+        satellites = try response.decode([NearbySatellite].self, forKey: .satellites)
+        iss = try response.decodeIfPresent(NearbySatellite.self, forKey: .iss)
     }
 }
 
