@@ -20,7 +20,7 @@ struct NetworkManager {
     let router = Router<SatelliteApi>()
     
     //MARK
-    func getNearbySatellites(location: CLLocation, completion: @escaping (_ data: NearbySatelliteResponse?, _ error: String?)->()){
+    func getNearbySatellites(location: CLLocation, completion: @escaping (_ data: NearbySatellites?, _ error: String?)->()){
         router.request(.nearby(location: location)) { data, response, error in
             //Error isn't nil; therefore network errors
             if error != nil {
@@ -41,7 +41,7 @@ struct NetworkManager {
                         let responseData = try JSONDecoder().decode(NearbySatelliteResponse.self, from: responseData)
                         
                         //MARK pass in data object into completion handler
-                        completion(responseData ,nil)
+                        completion(responseData.data ,nil)
                     } catch {
                         completion(nil, "Error decoding data - \(error)")
                     }
