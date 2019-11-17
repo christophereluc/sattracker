@@ -39,7 +39,7 @@ extension NearbySatellites: Decodable {
         let response = try decoder.container(keyedBy: NearbySatellitesCodingKeys.self)
         
         satellites = try response.decode([NearbySatellite].self, forKey: .satellites)
-        iss = try response.decode(NearbySatellite.self, forKey: .iss)
+        iss = try response.decodeIfPresent(NearbySatellite.self, forKey: .iss)
     }
 }
 
