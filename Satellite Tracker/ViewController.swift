@@ -17,17 +17,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     var locationData: [CLLocation] = []
     
     let sceneLocationView = SceneLocationView()
-    
     let locationManager = CLLocationManager()
-    let image = UIImage(systemName: "mappin.circle.fill")!
     var coordinate: CLLocationCoordinate2D?
     
     let networkManager = NetworkManager()
-    
-    /// Whether to display some debugging data
-    /// This currently displays the coordinate of the best location estimate
-    /// The initial value is respected
-    let displayDebugging = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,13 +62,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     func setupBasicARScene() {
         
-        sceneLocationView.showAxesNode = true
-        sceneLocationView.showFeaturePoints = displayDebugging
         sceneLocationView.locationNodeTouchDelegate = self
-        //        sceneLocationView.delegate = self // Causes an assertionFailure - use the `arViewDelegate` instead:
         sceneLocationView.arViewDelegate = self
         sceneLocationView.locationNodeTouchDelegate = self
-
+        sceneLocationView.orientToTrueNorth = true
+        
         view.addSubview(sceneLocationView)
         sceneLocationView.frame = view.bounds
     }
@@ -215,21 +206,12 @@ extension ViewController {
             }
             return
         }
-        
-        let box = SCNBox(width: 1, height: 0.2, length: 5, chamferRadius: 0.25)
-        box.firstMaterial?.diffuse.contents = UIColor.gray.withAlphaComponent(0.5)
-        
-        
-        // 3. If not, then show the
+                    
         satellites.forEach { satellite in
-            let node = buildNode(latitude: satellite.satlat, longitude: satellite.satlng, altitude: satellite.satalt)
+            //N2YO returns altiltue as KM, but CoreLocation expects altitude in meters, so convert before passing in.
+            let node = buildNode(latitude: satellite.satlat, longitude: satellite.satlng, altitude: (satellite.satalt * 1000))
             sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: node)
         }
-        
-        // There are many different ways to add lighting to a scene, but even this mechanism (the absolute simplest)
-        // keeps 3D objects fron looking flat
-        sceneLocationView.autoenablesDefaultLighting = true
-        
     }
     
     func buildNode(latitude: CLLocationDegrees, longitude: CLLocationDegrees,
@@ -243,20 +225,7 @@ extension ViewController {
         return setNodeViewAndTag(node: node, location: location, view: imageView)
 
     }
-    
-    func buildViewNode(latitude: CLLocationDegrees, longitude: CLLocationDegrees,
-                       altitude: CLLocationDistance, text: String) -> LocationAnnotationNode {
-        let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-        let location = CLLocation(coordinate: coordinate, altitude: altitude)
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-        label.text = text
-        label.backgroundColor = .green
-        label.textAlignment = .center
-        let node = LocationAnnotationNode(location: location, view: label)
-        return setNodeViewAndTag(node: node, location: location, view: label)
-        
-    }
-    
+
     //MARK This is hacky, but is resolved in ARCL 1.2.2, so remove this if library updated before DEC
     func setNodeViewAndTag(node: LocationAnnotationNode, location: CLLocation, view: UIView) -> LocationAnnotationNode {
         //Tag will be the index of the inserted CLLocation
