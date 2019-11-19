@@ -16,10 +16,10 @@ extension NearbySatelliteResponse: Decodable {
     enum NearbySatelliteResponseCodingKeys: String, CodingKey {
         case data
     }
-    
+
     init (from decoder: Decoder) throws {
         let response = try decoder.container(keyedBy: NearbySatelliteResponseCodingKeys.self)
-        
+
         data = try response.decode(NearbySatellites.self, forKey: .data)
     }
 }
@@ -34,10 +34,10 @@ extension NearbySatellites: Decodable {
         case satellites
         case iss
     }
-    
+
     init (from decoder: Decoder) throws {
         let response = try decoder.container(keyedBy: NearbySatellitesCodingKeys.self)
-        
+
         satellites = try response.decode([NearbySatellite].self, forKey: .satellites)
         iss = try response.decodeIfPresent(NearbySatellite.self, forKey: .iss)
     }
@@ -59,10 +59,10 @@ extension NearbySatellite: Decodable {
         case satlng
         case satalt
     }
-    
+
     init (from decoder: Decoder) throws {
         let nearbySatellite = try decoder.container(keyedBy: NearbySatelliteKeys.self)
-        
+
         satid = try nearbySatellite.decode(Int.self, forKey: .satid)
         satname = try nearbySatellite.decode(String.self, forKey: .satname)
         intDesignator = try nearbySatellite.decode(String.self, forKey: .intDesignator)
