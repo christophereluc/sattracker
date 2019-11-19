@@ -14,7 +14,7 @@ import CoreLocation
 @available(iOS 11.0, *)
 class ViewController: UIViewController {
 
-    var locationData: [CLLocation] = []
+    var nearbySatellites: [NearbySatellite] = []
 
     let sceneLocationView = SceneLocationView()
     let locationManager = CLLocationManager()
@@ -81,7 +81,11 @@ extension ViewController: LNTouchDelegate {
 
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "modalViewController") as! ModalViewController
-            newViewController.location = locationData[tag]
+            
+            let nearbySatellite = nearbySatellites[tag]
+            let coordinate = CLLocationCoordinate2D(latitude: nearbySatellite.satlat, longitude: nearbySatellite.satlng)
+            let location = CLLocation(coordinate: coordinate, altitude: (nearbySatellite.satalt * 1000))
+            newViewController.location = location
 
             self.present(newViewController, animated: true, completion: nil)
         }
@@ -127,30 +131,27 @@ extension ViewController: ARSCNViewDelegate {
         sceneLocationView.removeAllNodes()
         satellites.forEach { satellite in
             //N2YO returns altiltue as KM, but CoreLocation expects altitude in meters, so convert before passing in.
-            let node = buildNode(latitude: satellite.satlat, longitude: satellite.satlng, altitude: (satellite.satalt * 1000), imageName: imageName)
+            let node = buildNode(nearbySatellite: satellite, imageName: imageName)
             sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: node)
         }
     }
 
-    func buildNode(latitude: CLLocationDegrees, longitude: CLLocationDegrees,
-                   altitude: CLLocationDistance, imageName: String) -> LocationAnnotationNode {
-        let coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-        let location = CLLocation(coordinate: coordinate, altitude: altitude)
+    func buildNode(nearbySatellite: NearbySatellite, imageName: String) -> LocationAnnotationNode {
+        let coordinate = CLLocationCoordinate2D(latitude: nearbySatellite.satlat, longitude: nearbySatellite.satlng)
+        let location = CLLocation(coordinate: coordinate, altitude: (nearbySatellite.satalt * 1000))
         let image = UIImage(named: imageName)!
         let imageView = UIImageView(image: image)
 
         let node = LocationAnnotationNode(location: location, view: imageView)
-        return setNodeViewAndTag(node: node, location: location, view: imageView)
+        return setNodeViewAndTag(node: node, satellite: nearbySatellite, view: imageView)
 
     }
 
-
-
     //MARK This is hacky, but is resolved in ARCL 1.2.2, so remove this if library updated before DEC
-    func setNodeViewAndTag(node: LocationAnnotationNode, location: CLLocation, view: UIView) -> LocationAnnotationNode {
+    func setNodeViewAndTag(node: LocationAnnotationNode, satellite: NearbySatellite, view: UIView) -> LocationAnnotationNode {
         //Tag will be the index of the inserted CLLocation
-        let tag = locationData.count
-        locationData.append(location)
+        let tag = nearbySatellites.count
+        nearbySatellites.append(satellite)
         //Now set tag for retrieval later
         view.tag = tag
         node.annotationNode.view = view
