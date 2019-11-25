@@ -62,3 +62,9 @@ extension Beacon: Decodable {
         mode = try beac.decode(String.self, forKey: .mode)
     }
 }
+
+extension Beacon: CustomStringConvertible {
+    var description: String {
+        return "(\(name)\n\(satid)\n\(uplink)\n\(downlink)\n\(downlink)\n\(beacon)\n\(callsign)\n\(mode))"
+    }
+}

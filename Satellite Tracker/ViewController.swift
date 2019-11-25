@@ -15,7 +15,7 @@ import CoreLocation
 class ViewController: UIViewController {
 
     var nearbySatellites: [NearbySatellite] = []
-    var beaconData: Beacon?
+    var BeaconData: Beacon?
     let sceneLocationView = SceneLocationView()
     let locationManager = CLLocationManager()
     let networkManager = NetworkManager()
@@ -69,16 +69,17 @@ class ViewController: UIViewController {
 @available(iOS 11.0, *)
 extension ViewController: LNTouchDelegate {
     func locationNodeTouched(node: AnnotationNode) {
-
         if let tag = node.view?.tag {
 
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             let newViewController = storyBoard.instantiateViewController(withIdentifier: "modalViewController") as! ModalViewController
             let nearbySatellite = nearbySatellites[tag]
+            DispatchQueue.main.async {
+                self.getBeaconData(satid: nearbySatellite.satid, error: "ERROR")
+            }
             let coordinate = CLLocationCoordinate2D(latitude: nearbySatellite.satlat, longitude: nearbySatellite.satlng)
             let location = CLLocation(coordinate: coordinate, altitude: (nearbySatellite.satalt * 1000))
-            newViewController.location = location
-
+            newViewController.text = BeaconData?.description ?? "unknown"
             self.present(newViewController, animated: true, completion: nil)
         }
 
@@ -260,15 +261,20 @@ extension ViewController {
     
     func getBeaconData(satid: Int, error: String?) {
         networkManager.getBeacons(id: satid, completion: handleBeaconResults(data:error:))
+    
     }
     
-    func handleBeaconResults(data: BeaconResponse?, error: String?) {
+    func handleBeaconResults(data: Beacon?, error: String?) {
         if let data = data {
             //Rejoin main thread since this is called as a result of a bg threaded network call
-            DispatchQueue.main.async {
-                self.viewDidLoad()
+            DispatchQueue.main.sync {
+
+                self.BeaconData = data
+                print("DATA: \(String(describing: self.BeaconData))")
+                DispatchQueue.main.async {
+                    self.viewDidLoad()
+                }
             }
-            beaconData = data.data
         }
         else if let error = error {
             //MARK handle error case with dialog

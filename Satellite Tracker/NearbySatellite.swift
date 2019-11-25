@@ -45,8 +45,9 @@ extension NearbySatellites: Decodable {
 
 struct NearbySatellite {
     let satid: Int
-    let satname, intDesignator, launchDate: String
-    let satlat, satlng, satalt: Double
+    let satname, intDesignator, launchDate, satUplink, satDownlink, satMode: String
+    let satlat, satlng, satalt, satBeacon: Double
+
 }
 
 extension NearbySatellite: Decodable {
@@ -58,6 +59,10 @@ extension NearbySatellite: Decodable {
         case satlat
         case satlng
         case satalt
+        case satUplink
+        case satDownlink
+        case satBeacon
+        case satMode
     }
 
     init (from decoder: Decoder) throws {
@@ -70,5 +75,9 @@ extension NearbySatellite: Decodable {
         satlat = try nearbySatellite.decode(Double.self, forKey: .satlat)
         satlng = try nearbySatellite.decode(Double.self, forKey: .satlng)
         satalt = try nearbySatellite.decode(Double.self, forKey: .satalt)
+        satUplink = try nearbySatellite.decode(String.self, forKey: .satUplink)
+        satDownlink = try nearbySatellite.decode(String.self, forKey: .satDownlink)
+        satMode = try nearbySatellite.decode(String.self, forKey: .satMode)
+        satBeacon = try nearbySatellite.decode(Double.self, forKey: .satBeacon)
     }
 }
