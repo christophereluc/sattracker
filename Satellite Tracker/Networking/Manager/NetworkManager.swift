@@ -105,7 +105,7 @@ struct NetworkManager {
                     }
                     do {
                         //MARK: This is where the json object should be converted into a data model.  Still a TODO
-                        let responseData = try JSONDecoder().decode(NearbySatelliteResponse.self, from: responseData)
+                        let responseData = try JSONDecoder().decode(BeaconResponse.self, from: responseData)
 
                         //MARK pass in data object into completion handler
                         completion(responseData ,nil)
