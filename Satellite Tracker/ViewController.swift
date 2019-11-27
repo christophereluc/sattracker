@@ -139,11 +139,31 @@ extension ViewController: ARSCNViewDelegate {
     func buildNode(nearbySatellite: NearbySatellite, imageName: String) -> LocationAnnotationNode {
         let coordinate = CLLocationCoordinate2D(latitude: nearbySatellite.satlat, longitude: nearbySatellite.satlng)
         let location = CLLocation(coordinate: coordinate, altitude: (nearbySatellite.satalt * 1000))
+        
+        //First create an image
         let image = UIImage(named: imageName)!
         let imageView = UIImageView(image: image)
+        imageView.backgroundColor = UIColor.clear
+        imageView.frame = CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height)
 
-        let node = LocationAnnotationNode(location: location, view: imageView)
-        return setNodeViewAndTag(node: node, satellite: nearbySatellite, view: imageView)
+        //Now create a text label of the satellite name
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height))
+        label.backgroundColor = UIColor.clear
+        label.textAlignment = .center
+        label.textColor = UIColor.white
+        label.text = nearbySatellite.satname
+        label.font = UIFont.boldSystemFont(ofSize: 19)
+
+        //Overlay the text over the image and spit out a new UIImageView
+        UIGraphicsBeginImageContextWithOptions(label.bounds.size, false, 0)
+        imageView.layer.render(in: UIGraphicsGetCurrentContext()!)
+        label.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let imageWithText = UIImageView(image: UIGraphicsGetImageFromCurrentImageContext())
+        UIGraphicsEndImageContext()
+
+        //use the combo uiimageview as the sky node
+        let node = LocationAnnotationNode(location: location, view: imageWithText)
+        return setNodeViewAndTag(node: node, satellite: nearbySatellite, view: imageWithText)
 
     }
 
