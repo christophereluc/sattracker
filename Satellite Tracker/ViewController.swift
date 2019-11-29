@@ -105,17 +105,17 @@ extension ViewController: LNTouchDelegate {
     func locationNodeTouched(node: AnnotationNode) {
         
         if let tag = node.view?.tag {
-            
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "modalViewController") as! ModalViewController
             let nearbySatellite = nearbySatellites[tag]
-            DispatchQueue.main.async {
-                self.getBeaconData(satid: nearbySatellite.satid, error: "ERROR")
+            networkManager.getBeacons(id: nearbySatellite.satid) { (response, error) in
+                //                    let coordinate = CLLocationCoordinate2D(latitude: nearbySatellite.satlat, longitude: nearbySatellite.satlng)
+                //                    let location = CLLocation(coordinate: coordinate, altitude: (nearbySatellite.satalt * 1000))
+                DispatchQueue.main.async {
+                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let newViewController = storyBoard.instantiateViewController(withIdentifier: "modalViewController") as! ModalViewController
+                    newViewController.text = response?.description ?? "unknown"
+                    self.present(newViewController, animated: true, completion: nil)
+                }
             }
-            let coordinate = CLLocationCoordinate2D(latitude: nearbySatellite.satlat, longitude: nearbySatellite.satlng)
-            let location = CLLocation(coordinate: coordinate, altitude: (nearbySatellite.satalt * 1000))
-            newViewController.text = BeaconData?.description ?? "unknown"
-            self.present(newViewController, animated: true, completion: nil)
         }
         
     }
@@ -160,7 +160,7 @@ extension ViewController: ARSCNViewDelegate {
         satellites.forEach { satellite in
             //N2YO returns altiltue as KM, but CoreLocation expects altitude in meters, so convert before passing in.
             let node = buildNode(nearbySatellite: satellite, imageName: imageName)
-
+            
             sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: node)
         }
     }
@@ -168,7 +168,7 @@ extension ViewController: ARSCNViewDelegate {
     func buildNode(nearbySatellite: NearbySatellite, imageName: String) -> LocationAnnotationNode {
         let coordinate = CLLocationCoordinate2D(latitude: nearbySatellite.satlat, longitude: nearbySatellite.satlng)
         let location = CLLocation(coordinate: coordinate, altitude: (nearbySatellite.satalt * 1000))
-
+        
         //First create an image
         let image = UIImage(named: imageName)!
         let imageView = UIImageView(image: image)
@@ -201,7 +201,7 @@ extension ViewController: ARSCNViewDelegate {
         //Tag will be the index of the inserted CLLocation
         let tag = nearbySatellites.count
         nearbySatellites.append(satellite)
-
+        
         //Now set tag for retrieval later
         view.tag = tag
         node.annotationNode.view = view
@@ -272,14 +272,7 @@ extension ViewController: CLLocationManagerDelegate {
     
     //Called when location changes
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let locValue:CLLocationCoordinate2D = manager.location!.coordinate
-        
-        //MARK just a test to get the API call to occur
-        if calledOnce == false {
-            calledOnce = true
 
-            networkManager.getPath(id: 41465, location: manager.location!, completion: testPathCompletion)
-        }
     }
     
 }
@@ -315,33 +308,6 @@ extension ViewController {
             //MARK handle error case with dialog
             print(error)
         }
-    }
-
-    func getBeaconData(satid: Int, error: String?) {
-        networkManager.getBeacons(id: satid, completion: handleBeaconResults(data:error:))
-
-    }
-
-    func handleBeaconResults(data: Beacon?, error: String?) {
-        if let data = data {
-            //Rejoin main thread since this is called as a result of a bg threaded network call
-            DispatchQueue.main.sync {
-
-                self.BeaconData = data
-                print("DATA: \(String(describing: self.BeaconData))")
-                DispatchQueue.main.async {
-                    self.viewDidLoad()
-                }
-            }
-        }
-        else if let error = error {
-            //MARK handle error case with dialog
-            print(error)
-        }
-    }
-
-    func getPathData(data: Path?, error: String?) {
-
     }
 }
 
