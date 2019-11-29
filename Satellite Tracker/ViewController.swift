@@ -26,7 +26,7 @@ class ViewController: UIViewController {
 
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-        
+
         setupBasicARScene()
     }
 
@@ -134,11 +134,31 @@ extension ViewController: ARSCNViewDelegate {
         let coordinate = CLLocationCoordinate2D(latitude: nearbySatellite.satlat, longitude: nearbySatellite.satlng)
         let location = CLLocation(coordinate: coordinate, altitude: (nearbySatellite.satalt * 1000))
 
+        //First create an image
         let image = UIImage(named: imageName)!
         let imageView = UIImageView(image: image)
+        imageView.backgroundColor = UIColor.clear
+        imageView.frame = CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height)
 
-        let node = LocationAnnotationNode(location: location, view: imageView)
-        return setNodeViewAndTag(node: node, satellite: nearbySatellite, view: imageView)
+        //Now create a text label of the satellite name
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height))
+        label.backgroundColor = UIColor.clear
+        label.textAlignment = .center
+        label.textColor = UIColor.white
+        label.text = nearbySatellite.satname
+        label.font = UIFont.boldSystemFont(ofSize: 19)
+
+        //Overlay the text over the image and spit out a new UIImageView
+        UIGraphicsBeginImageContextWithOptions(label.bounds.size, false, 0)
+        imageView.layer.render(in: UIGraphicsGetCurrentContext()!)
+        label.layer.render(in: UIGraphicsGetCurrentContext()!)
+        let imageWithText = UIImageView(image: UIGraphicsGetImageFromCurrentImageContext())
+        UIGraphicsEndImageContext()
+
+        //use the combo uiimageview as the sky node
+        let node = LocationAnnotationNode(location: location, view: imageWithText)
+        return setNodeViewAndTag(node: node, satellite: nearbySatellite, view: imageWithText)
+
     }
 
     //MARK This is hacky, but is resolved in ARCL 1.2.2, so remove this if library updated before DEC
@@ -222,7 +242,7 @@ extension ViewController: CLLocationManagerDelegate {
         //MARK just a test to get the API call to occur
         if calledOnce == false {
             calledOnce = true
-           
+
             networkManager.getPath(id: 41465, location: manager.location!, completion: testPathCompletion)
         }
     }
@@ -258,12 +278,12 @@ extension ViewController {
             print(error)
         }
     }
-    
+
     func getBeaconData(satid: Int, error: String?) {
         networkManager.getBeacons(id: satid, completion: handleBeaconResults(data:error:))
-    
+
     }
-    
+
     func handleBeaconResults(data: Beacon?, error: String?) {
         if let data = data {
             //Rejoin main thread since this is called as a result of a bg threaded network call

@@ -8,18 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		1646DCA1A72255FF0A3233E0ECFB1871 /* SceneLocationEstimate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5CFEA4CE1010D128A8BAAD2AA4147C /* SceneLocationEstimate+Extensions.swift */; };
-		279CE6797BE3AA2AA39F1B18935B685C /* Pods-Satellite Tracker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E81BA28042116D3588C11BDBAE46A4AF /* Pods-Satellite Tracker-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		279CE6797BE3AA2AA39F1B18935B685C /* Pods-Satellite Tracker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AB054793AAC2914BFBA3F1777A16D822 /* Pods-Satellite Tracker-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		342BC8B8E2DEEBA1132853F0C518652C /* ARCL-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B7BE867BC16660AEF97A06324BD4DED8 /* ARCL-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		48633EF606B2F5F3D31BEBF38F1467DD /* BaseTypes+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1802CFEB2DF85AEA99DE79A15A5CD2B /* BaseTypes+Extensions.swift */; };
 		4CE88E5FCEC379A8C4F933FC5EE6AC45 /* ScalingScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943A18E488EBDB7E3C17B9FF519F2BC7 /* ScalingScheme.swift */; };
 		521C622259A6293BC7CD5A042C211509 /* SceneLocationView+ARSCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967619D3FA2DA78935F90F0C70FE89CE /* SceneLocationView+ARSCNViewDelegate.swift */; };
 		561E7FD70FC3AEBDC23A7D60AFFF0472 /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDC8BA841AEF14F9B0487E991EA72A6 /* CGPoint+Extensions.swift */; };
 		61D2E171AF440128D033989A1493D113 /* ARCL-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F8BCE38593742054158E8466B65CAF7 /* ARCL-dummy.m */; };
+		6A0013B918005E1DFDC345139D266A4E /* Pods-Satellite TrackerTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 31ECC776DB5085E0243EA11EDEB679EC /* Pods-Satellite TrackerTests-dummy.m */; };
 		6C3CEF2B23F418F63A2CB84EC270E492 /* CLLocation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C827F0699D5092E19FFCD936FDC6BA6 /* CLLocation+Extensions.swift */; };
 		71BC681BF622C5E47675F6B7AB641FD7 /* FloatingPoint+Radians.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6111EC5583DB3C976AB6EA405003E59 /* FloatingPoint+Radians.swift */; };
 		7B03B64C2497DE10F70EE5558CA41404 /* SCNNode+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBCE609C694E57C51BE789E94DACFC6 /* SCNNode+Extensions.swift */; };
 		86DAB31018EBF7AB4051E65F21B44C8A /* SceneLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23D3C9AF0EE431EC2D1921DE96027F4 /* SceneLocationManager.swift */; };
-		90F398A9F34032EA57C8AEC743340006 /* Pods-Satellite Tracker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 63069ABF138DF4AC83E7D743D99FAB3D /* Pods-Satellite Tracker-dummy.m */; };
+		90F398A9F34032EA57C8AEC743340006 /* Pods-Satellite Tracker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FFED49420122B094AB123D521AFA03F /* Pods-Satellite Tracker-dummy.m */; };
 		99EA5D9CA5D205DCD04B4058DD38462A /* SCNVector3+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF138C68E00C1B9B5880937AE2A6E6E3 /* SCNVector3+Extensions.swift */; };
 		9B08E6D8453743EEB0C3AA76E8E19FF4 /* ARKit_CoreLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1367AF8C64FD5CFE10168D018A9C178D /* ARKit_CoreLocation.swift */; };
 		A6C9CA545EB4E4A9275327FECBAC8398 /* SceneLocationViewEstimateDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5F5CC7B48AC6FB2E0D8CD637B7130E /* SceneLocationViewEstimateDelegate.swift */; };
@@ -27,11 +28,26 @@
 		B4C7740D565E5F14D8DEB92718494B83 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E7361168FD18E7C2D2FD643AF441B0 /* LocationManager.swift */; };
 		D6C134EB7DAF3EAEEF063BAA37E20629 /* SceneLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DD646EE4157263C4C6CB8508F365D6 /* SceneLocationView.swift */; };
 		DF4909311F8345B5165AFB151C7F8361 /* PolylineNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65F37E72FF12AD24B55E14336F99416 /* PolylineNode.swift */; };
+		E083794CAB3ED2D2B97EA55545F0D3EE /* Pods-Satellite TrackerTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E9B385C7D71E6DFBAAA64160EA0BDEF /* Pods-Satellite TrackerTests-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F8E290F4E7EEC11591FC9F5D51656D03 /* LocationAnnotationNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B72F5DC197456E7ADE132393E96B8C /* LocationAnnotationNode.swift */; };
 		FDC7452EF66E0E32A05FE9A317B5969F /* SceneLocationEstimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431A2436763893C6EA9E71F370843C1D /* SceneLocationEstimate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		02FE6DAD42F764798530E2F55B301166 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB32E97F940371D391F6B8FB4F24AC15;
+			remoteInfo = ARCL;
+		};
+		138D42C869134895101CC73BB6DB6B82 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 211DDBD92E247A961AE11E2BE72B29C7;
+			remoteInfo = "Pods-Satellite Tracker";
+		};
 		BEAD70ABD72E28D07BC0265CEC7A33A6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
@@ -43,42 +59,57 @@
 
 /* Begin PBXFileReference section */
 		047D6BE33A241D54BCBFB5BC112BF338 /* libPods-Satellite Tracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Satellite Tracker.a"; path = "libPods-Satellite Tracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BE505BE1628B11872FA3949D8B88F34 /* libPods-Satellite TrackerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Satellite TrackerTests.a"; path = "libPods-Satellite TrackerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1367AF8C64FD5CFE10168D018A9C178D /* ARKit_CoreLocation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ARKit_CoreLocation.swift; path = "Sources/ARKit-CoreLocation/ARKit_CoreLocation.swift"; sourceTree = "<group>"; };
-		178A0CC5AD3DA9602F779C28DFDCBF69 /* Pods-Satellite Tracker-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Satellite Tracker-acknowledgements.plist"; sourceTree = "<group>"; };
-		198AD5E2EFEE40A5582E42D21DCF991E /* Pods-Satellite Tracker-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Satellite Tracker-acknowledgements.markdown"; sourceTree = "<group>"; };
 		1BEDA0F27DCD707899920899B74774A0 /* ARCL-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ARCL-prefix.pch"; sourceTree = "<group>"; };
+		1E9B385C7D71E6DFBAAA64160EA0BDEF /* Pods-Satellite TrackerTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Satellite TrackerTests-umbrella.h"; sourceTree = "<group>"; };
 		27B72F5DC197456E7ADE132393E96B8C /* LocationAnnotationNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocationAnnotationNode.swift; path = "Sources/ARKit-CoreLocation/Nodes/LocationAnnotationNode.swift"; sourceTree = "<group>"; };
 		2BDC8BA841AEF14F9B0487E991EA72A6 /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGPoint+Extensions.swift"; path = "Sources/ARKit-CoreLocation/Extensions/CGPoint+Extensions.swift"; sourceTree = "<group>"; };
+		31ECC776DB5085E0243EA11EDEB679EC /* Pods-Satellite TrackerTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Satellite TrackerTests-dummy.m"; sourceTree = "<group>"; };
 		361A5A761E2E0A488F1277CA9AB69184 /* ARCL.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ARCL.modulemap; sourceTree = "<group>"; };
 		3C827F0699D5092E19FFCD936FDC6BA6 /* CLLocation+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CLLocation+Extensions.swift"; path = "Sources/ARKit-CoreLocation/Extensions/CLLocation+Extensions.swift"; sourceTree = "<group>"; };
 		431A2436763893C6EA9E71F370843C1D /* SceneLocationEstimate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SceneLocationEstimate.swift; path = "Sources/ARKit-CoreLocation/Location Manager/SceneLocationEstimate.swift"; sourceTree = "<group>"; };
-		63069ABF138DF4AC83E7D743D99FAB3D /* Pods-Satellite Tracker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Satellite Tracker-dummy.m"; sourceTree = "<group>"; };
+		50F84F3B74B30210BE050C7A362DBC27 /* Pods-Satellite Tracker-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Satellite Tracker-acknowledgements.plist"; sourceTree = "<group>"; };
+		638E80DCA435ED94AD8AC83E18840510 /* Pods-Satellite TrackerTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Satellite TrackerTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6837B4C207F64567079AFFED6876C19A /* Pods-Satellite TrackerTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Satellite TrackerTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		694843D9A3D74DA7D710D2CA04D31912 /* Pods-Satellite Tracker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Satellite Tracker.modulemap"; sourceTree = "<group>"; };
 		6E5F5CC7B48AC6FB2E0D8CD637B7130E /* SceneLocationViewEstimateDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SceneLocationViewEstimateDelegate.swift; path = "Sources/ARKit-CoreLocation/SceneLocationViewEstimateDelegate.swift"; sourceTree = "<group>"; };
+		7333C0DE07E371F57B73823A90AC5BCC /* Pods-Satellite TrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Satellite TrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		7D4C7CCFE2481EEA46591EEB7A867A71 /* ARCL.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ARCL.xcconfig; sourceTree = "<group>"; };
 		7E5CFEA4CE1010D128A8BAAD2AA4147C /* SceneLocationEstimate+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SceneLocationEstimate+Extensions.swift"; path = "Sources/ARKit-CoreLocation/Location Manager/SceneLocationEstimate+Extensions.swift"; sourceTree = "<group>"; };
 		7F8BCE38593742054158E8466B65CAF7 /* ARCL-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ARCL-dummy.m"; sourceTree = "<group>"; };
 		85E7361168FD18E7C2D2FD643AF441B0 /* LocationManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocationManager.swift; path = "Sources/ARKit-CoreLocation/Location Manager/LocationManager.swift"; sourceTree = "<group>"; };
+		874717C8E1D1E108E275BD82EB9F3FC7 /* Pods-Satellite Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Satellite Tracker.debug.xcconfig"; sourceTree = "<group>"; };
 		943A18E488EBDB7E3C17B9FF519F2BC7 /* ScalingScheme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScalingScheme.swift; path = "Sources/ARKit-CoreLocation/Nodes/ScalingScheme.swift"; sourceTree = "<group>"; };
 		967619D3FA2DA78935F90F0C70FE89CE /* SceneLocationView+ARSCNViewDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SceneLocationView+ARSCNViewDelegate.swift"; path = "Sources/ARKit-CoreLocation/SceneLocationView+ARSCNViewDelegate.swift"; sourceTree = "<group>"; };
 		9BBCE609C694E57C51BE789E94DACFC6 /* SCNNode+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SCNNode+Extensions.swift"; path = "Sources/ARKit-CoreLocation/Extensions/SCNNode+Extensions.swift"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A64D1E008A787197351446B69D01AAEB /* Pods-Satellite Tracker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Satellite Tracker.modulemap"; sourceTree = "<group>"; };
-		AA891FC9BCA1C2B97A71A4221DA1C67A /* Pods-Satellite Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Satellite Tracker.debug.xcconfig"; sourceTree = "<group>"; };
+		9FFED49420122B094AB123D521AFA03F /* Pods-Satellite Tracker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Satellite Tracker-dummy.m"; sourceTree = "<group>"; };
+		AB054793AAC2914BFBA3F1777A16D822 /* Pods-Satellite Tracker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Satellite Tracker-umbrella.h"; sourceTree = "<group>"; };
 		AF138C68E00C1B9B5880937AE2A6E6E3 /* SCNVector3+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "SCNVector3+Extensions.swift"; path = "Sources/ARKit-CoreLocation/Extensions/SCNVector3+Extensions.swift"; sourceTree = "<group>"; };
 		B1802CFEB2DF85AEA99DE79A15A5CD2B /* BaseTypes+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "BaseTypes+Extensions.swift"; path = "Sources/ARKit-CoreLocation/Extensions/BaseTypes+Extensions.swift"; sourceTree = "<group>"; };
+		B4F72EC4DFC98B456697014B249C3654 /* Pods-Satellite Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Satellite Tracker.release.xcconfig"; sourceTree = "<group>"; };
 		B6111EC5583DB3C976AB6EA405003E59 /* FloatingPoint+Radians.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "FloatingPoint+Radians.swift"; path = "Sources/ARKit-CoreLocation/Extensions/FloatingPoint+Radians.swift"; sourceTree = "<group>"; };
 		B7BE867BC16660AEF97A06324BD4DED8 /* ARCL-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ARCL-umbrella.h"; sourceTree = "<group>"; };
+		C05149FF2F1BD8D9124271FD95D7146D /* Pods-Satellite TrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Satellite TrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C7ADEE321186A59406F16630332B9832 /* libARCL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libARCL.a; path = libARCL.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7DD646EE4157263C4C6CB8508F365D6 /* SceneLocationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SceneLocationView.swift; path = "Sources/ARKit-CoreLocation/SceneLocationView.swift"; sourceTree = "<group>"; };
 		D65F37E72FF12AD24B55E14336F99416 /* PolylineNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PolylineNode.swift; path = "Sources/ARKit-CoreLocation/Nodes/PolylineNode.swift"; sourceTree = "<group>"; };
-		E81BA28042116D3588C11BDBAE46A4AF /* Pods-Satellite Tracker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Satellite Tracker-umbrella.h"; sourceTree = "<group>"; };
+		E48BBB7173A4A6BF15B4BE2B2DA72FF5 /* Pods-Satellite TrackerTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Satellite TrackerTests.modulemap"; sourceTree = "<group>"; };
+		EC68E5F3A62377F5DB46DEDF2DC0059A /* Pods-Satellite Tracker-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Satellite Tracker-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F035F5E634F5D6C5F560F19B4B6F6B68 /* LocationNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocationNode.swift; path = "Sources/ARKit-CoreLocation/Nodes/LocationNode.swift"; sourceTree = "<group>"; };
 		F23D3C9AF0EE431EC2D1921DE96027F4 /* SceneLocationManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SceneLocationManager.swift; path = "Sources/ARKit-CoreLocation/Location Manager/SceneLocationManager.swift"; sourceTree = "<group>"; };
-		FCB99A62732DC3C6348897C021EFFE6A /* Pods-Satellite Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Satellite Tracker.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		5178230ADE8973FF006BDCCB7841A0BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		837485641B2BE751827F1ECB5E315468 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -95,12 +126,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0445294543AC5DEDEEED6B1BE2963F25 /* Targets Support Files */ = {
+		08ED0CE2B129467690ABDFCD93B20A8E /* Pods-Satellite TrackerTests */ = {
 			isa = PBXGroup;
 			children = (
-				E0833419D2D2247635EB15E618308590 /* Pods-Satellite Tracker */,
+				E48BBB7173A4A6BF15B4BE2B2DA72FF5 /* Pods-Satellite TrackerTests.modulemap */,
+				638E80DCA435ED94AD8AC83E18840510 /* Pods-Satellite TrackerTests-acknowledgements.markdown */,
+				6837B4C207F64567079AFFED6876C19A /* Pods-Satellite TrackerTests-acknowledgements.plist */,
+				31ECC776DB5085E0243EA11EDEB679EC /* Pods-Satellite TrackerTests-dummy.m */,
+				1E9B385C7D71E6DFBAAA64160EA0BDEF /* Pods-Satellite TrackerTests-umbrella.h */,
+				C05149FF2F1BD8D9124271FD95D7146D /* Pods-Satellite TrackerTests.debug.xcconfig */,
+				7333C0DE07E371F57B73823A90AC5BCC /* Pods-Satellite TrackerTests.release.xcconfig */,
 			);
-			name = "Targets Support Files";
+			name = "Pods-Satellite TrackerTests";
+			path = "Target Support Files/Pods-Satellite TrackerTests";
 			sourceTree = "<group>";
 		};
 		13357B262E1B85DFF1813905E641434E /* Support Files */ = {
@@ -122,6 +160,15 @@
 				547799EA8AE9DCB0961B5C6934001755 /* ARCL */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		53DAC34F5AFE47C7F07EF9F2595D3B73 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3769497B0A15A41115250600293F775 /* Pods-Satellite Tracker */,
+				08ED0CE2B129467690ABDFCD93B20A8E /* Pods-Satellite TrackerTests */,
+			);
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		547799EA8AE9DCB0961B5C6934001755 /* ARCL */ = {
@@ -151,13 +198,29 @@
 			path = ARCL;
 			sourceTree = "<group>";
 		};
-		92FD9D66D1DC4437AC754FDF799888CD /* Products */ = {
+		7974C66618F122D0BE1DDDE4B42DCF71 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				C7ADEE321186A59406F16630332B9832 /* libARCL.a */,
 				047D6BE33A241D54BCBFB5BC112BF338 /* libPods-Satellite Tracker.a */,
+				0BE505BE1628B11872FA3949D8B88F34 /* libPods-Satellite TrackerTests.a */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		A3769497B0A15A41115250600293F775 /* Pods-Satellite Tracker */ = {
+			isa = PBXGroup;
+			children = (
+				694843D9A3D74DA7D710D2CA04D31912 /* Pods-Satellite Tracker.modulemap */,
+				EC68E5F3A62377F5DB46DEDF2DC0059A /* Pods-Satellite Tracker-acknowledgements.markdown */,
+				50F84F3B74B30210BE050C7A362DBC27 /* Pods-Satellite Tracker-acknowledgements.plist */,
+				9FFED49420122B094AB123D521AFA03F /* Pods-Satellite Tracker-dummy.m */,
+				AB054793AAC2914BFBA3F1777A16D822 /* Pods-Satellite Tracker-umbrella.h */,
+				874717C8E1D1E108E275BD82EB9F3FC7 /* Pods-Satellite Tracker.debug.xcconfig */,
+				B4F72EC4DFC98B456697014B249C3654 /* Pods-Satellite Tracker.release.xcconfig */,
+			);
+			name = "Pods-Satellite Tracker";
+			path = "Target Support Files/Pods-Satellite Tracker";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -166,8 +229,8 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
 				1E6C44C9DF3E0087570B499037F4AC36 /* Pods */,
-				92FD9D66D1DC4437AC754FDF799888CD /* Products */,
-				0445294543AC5DEDEEED6B1BE2963F25 /* Targets Support Files */,
+				7974C66618F122D0BE1DDDE4B42DCF71 /* Products */,
+				53DAC34F5AFE47C7F07EF9F2595D3B73 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -178,21 +241,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E0833419D2D2247635EB15E618308590 /* Pods-Satellite Tracker */ = {
-			isa = PBXGroup;
-			children = (
-				A64D1E008A787197351446B69D01AAEB /* Pods-Satellite Tracker.modulemap */,
-				198AD5E2EFEE40A5582E42D21DCF991E /* Pods-Satellite Tracker-acknowledgements.markdown */,
-				178A0CC5AD3DA9602F779C28DFDCBF69 /* Pods-Satellite Tracker-acknowledgements.plist */,
-				63069ABF138DF4AC83E7D743D99FAB3D /* Pods-Satellite Tracker-dummy.m */,
-				E81BA28042116D3588C11BDBAE46A4AF /* Pods-Satellite Tracker-umbrella.h */,
-				AA891FC9BCA1C2B97A71A4221DA1C67A /* Pods-Satellite Tracker.debug.xcconfig */,
-				FCB99A62732DC3C6348897C021EFFE6A /* Pods-Satellite Tracker.release.xcconfig */,
-			);
-			name = "Pods-Satellite Tracker";
-			path = "Target Support Files/Pods-Satellite Tracker";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -201,6 +249,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				279CE6797BE3AA2AA39F1B18935B685C /* Pods-Satellite Tracker-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32399F34590E8A2EA17A382112FD6C41 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E083794CAB3ED2D2B97EA55545F0D3EE /* Pods-Satellite TrackerTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +287,25 @@
 			name = "Pods-Satellite Tracker";
 			productName = "Pods-Satellite Tracker";
 			productReference = 047D6BE33A241D54BCBFB5BC112BF338 /* libPods-Satellite Tracker.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		975C7440F20BC92BBCB0399ED04A5C46 /* Pods-Satellite TrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9298790903E452EB47E15EE2A01B0F15 /* Build configuration list for PBXNativeTarget "Pods-Satellite TrackerTests" */;
+			buildPhases = (
+				32399F34590E8A2EA17A382112FD6C41 /* Headers */,
+				BEEDCB128C798812AB4F4FF8200DD1B4 /* Sources */,
+				837485641B2BE751827F1ECB5E315468 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A951150B4C44B19C211EEF9CEBEE0E9E /* PBXTargetDependency */,
+				95C260A52187B88FB8E81AC050A951AD /* PBXTargetDependency */,
+			);
+			name = "Pods-Satellite TrackerTests";
+			productName = "Pods-Satellite TrackerTests";
+			productReference = 0BE505BE1628B11872FA3949D8B88F34 /* libPods-Satellite TrackerTests.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		BB32E97F940371D391F6B8FB4F24AC15 /* ARCL */ = {
@@ -269,12 +344,13 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 92FD9D66D1DC4437AC754FDF799888CD /* Products */;
+			productRefGroup = 7974C66618F122D0BE1DDDE4B42DCF71 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				BB32E97F940371D391F6B8FB4F24AC15 /* ARCL */,
 				211DDBD92E247A961AE11E2BE72B29C7 /* Pods-Satellite Tracker */,
+				975C7440F20BC92BBCB0399ED04A5C46 /* Pods-Satellite TrackerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -333,6 +409,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BEEDCB128C798812AB4F4FF8200DD1B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A0013B918005E1DFDC345139D266A4E /* Pods-Satellite TrackerTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CDFB097FD380877D14A0F368AFF7F9C3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -350,12 +434,48 @@
 			target = BB32E97F940371D391F6B8FB4F24AC15 /* ARCL */;
 			targetProxy = BEAD70ABD72E28D07BC0265CEC7A33A6 /* PBXContainerItemProxy */;
 		};
+		95C260A52187B88FB8E81AC050A951AD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Satellite Tracker";
+			target = 211DDBD92E247A961AE11E2BE72B29C7 /* Pods-Satellite Tracker */;
+			targetProxy = 138D42C869134895101CC73BB6DB6B82 /* PBXContainerItemProxy */;
+		};
+		A951150B4C44B19C211EEF9CEBEE0E9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ARCL;
+			target = BB32E97F940371D391F6B8FB4F24AC15 /* ARCL */;
+			targetProxy = 02FE6DAD42F764798530E2F55B301166 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		1811C22CC2A8C37864ABAA08AE156A59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7333C0DE07E371F57B73823A90AC5BCC /* Pods-Satellite TrackerTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Satellite TrackerTests/Pods-Satellite TrackerTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		2316FE97F4A4BA6FAD5722B490F3018B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FCB99A62732DC3C6348897C021EFFE6A /* Pods-Satellite Tracker.release.xcconfig */;
+			baseConfigurationReference = B4F72EC4DFC98B456697014B249C3654 /* Pods-Satellite Tracker.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -464,7 +584,7 @@
 		};
 		8E9853811D78D748CC2976301792AF14 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA891FC9BCA1C2B97A71A4221DA1C67A /* Pods-Satellite Tracker.debug.xcconfig */;
+			baseConfigurationReference = 874717C8E1D1E108E275BD82EB9F3FC7 /* Pods-Satellite Tracker.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -510,6 +630,29 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
+		};
+		D22BD7C68413E6E084D80FAF15340E05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C05149FF2F1BD8D9124271FD95D7146D /* Pods-Satellite TrackerTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Satellite TrackerTests/Pods-Satellite TrackerTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
 		};
 		DD8F832993327D1DD8046C3CBCBD97CD /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -601,6 +744,15 @@
 			buildConfigurations = (
 				8E9853811D78D748CC2976301792AF14 /* Debug */,
 				2316FE97F4A4BA6FAD5722B490F3018B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9298790903E452EB47E15EE2A01B0F15 /* Build configuration list for PBXNativeTarget "Pods-Satellite TrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D22BD7C68413E6E084D80FAF15340E05 /* Debug */,
+				1811C22CC2A8C37864ABAA08AE156A59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

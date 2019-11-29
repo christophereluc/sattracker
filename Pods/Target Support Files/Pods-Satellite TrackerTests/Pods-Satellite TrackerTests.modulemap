@@ -1,0 +1,6 @@
+module Pods_Satellite_TrackerTests {
+  umbrella header "Pods-Satellite TrackerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

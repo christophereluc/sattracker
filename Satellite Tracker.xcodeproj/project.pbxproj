@@ -8,26 +8,39 @@
 
 /* Begin PBXBuildFile section */
 		107FAD030B267AEDEACCA35F /* libPods-Satellite Tracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 388436E9B1B7DE8ADDBDB2C1 /* libPods-Satellite Tracker.a */; };
+		4FAB8461531E7E31C0B9E9D6 /* libPods-Satellite TrackerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5ECF8173F5BB0854BDCFE8D /* libPods-Satellite TrackerTests.a */; };
 		5D020CBE234A9F660078864C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D020CBD234A9F660078864C /* AppDelegate.swift */; };
 		5D020CC0234A9F660078864C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D020CBF234A9F660078864C /* SceneDelegate.swift */; };
 		5D020CC2234A9F660078864C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D020CC1234A9F660078864C /* ViewController.swift */; };
 		5D020CC5234A9F660078864C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D020CC3234A9F660078864C /* Main.storyboard */; };
 		5D020CC7234A9F680078864C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D020CC6234A9F680078864C /* Assets.xcassets */; };
 		5D020CCA234A9F680078864C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D020CC8234A9F680078864C /* LaunchScreen.storyboard */; };
-		5D198A4C2374821A0023EEAD /* NearbySatellite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D198A4B2374821A0023EEAD /* NearbySatellite.swift */; };
 		5D687D4F2366339900A8A812 /* SatalliteModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D687D4E2366339900A8A812 /* SatalliteModal.swift */; };
 		5D85137D236E495C00702BB3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D85137C236E495C00702BB3 /* NetworkManager.swift */; };
 		5D85137F236E499E00702BB3 /* SatelliteEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D85137E236E499E00702BB3 /* SatelliteEndpoint.swift */; };
 		5D851382236E4B0600702BB3 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D851381236E4B0600702BB3 /* EndPointType.swift */; };
 		5D851384236E4B4900702BB3 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D851383236E4B4900702BB3 /* NetworkRouter.swift */; };
 		5D851386236E4D5400702BB3 /* HttpTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D851385236E4D5400702BB3 /* HttpTask.swift */; };
+		5D9741FA238CCEEF00C99815 /* Satellite_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9741F9238CCEEF00C99815 /* Satellite_TrackerTests.swift */; };
 		5DF2CB16237B92E5004005B1 /* NearbySatellite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF2CB15237B92E5004005B1 /* NearbySatellite.swift */; };
 		B6BA79402373EB6E0036EE57 /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BA793F2373EB6E0036EE57 /* Beacon.swift */; };
 		B6BA79422373EBE20036EE57 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BA79412373EBE20036EE57 /* Path.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5D9741FC238CCEEF00C99815 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D020CB2234A9F660078864C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5D020CB9234A9F660078864C;
+			remoteInfo = "Satellite Tracker";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		0D7380C8E8DEC178AB4B0A5D /* Pods-Satellite TrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Satellite TrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-Satellite TrackerTests/Pods-Satellite TrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1B008A74C157C2BAF85932A4 /* Pods-Satellite Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Satellite Tracker.debug.xcconfig"; path = "Target Support Files/Pods-Satellite Tracker/Pods-Satellite Tracker.debug.xcconfig"; sourceTree = "<group>"; };
+		2530ADFB6763571443A52F65 /* Pods-Satellite TrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Satellite TrackerTests.release.xcconfig"; path = "Target Support Files/Pods-Satellite TrackerTests/Pods-Satellite TrackerTests.release.xcconfig"; sourceTree = "<group>"; };
 		388436E9B1B7DE8ADDBDB2C1 /* libPods-Satellite Tracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Satellite Tracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D020CBA234A9F660078864C /* Satellite Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Satellite Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D020CBD234A9F660078864C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -37,17 +50,20 @@
 		5D020CC6234A9F680078864C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D020CC9234A9F680078864C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D020CCB234A9F680078864C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5D198A4B2374821A0023EEAD /* NearbySatellite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbySatellite.swift; sourceTree = "<group>"; };
 		5D687D4E2366339900A8A812 /* SatalliteModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatalliteModal.swift; sourceTree = "<group>"; };
 		5D85137C236E495C00702BB3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		5D85137E236E499E00702BB3 /* SatelliteEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatelliteEndpoint.swift; sourceTree = "<group>"; };
 		5D851381236E4B0600702BB3 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		5D851383236E4B4900702BB3 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
 		5D851385236E4D5400702BB3 /* HttpTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpTask.swift; sourceTree = "<group>"; };
+		5D9741F7238CCEEF00C99815 /* Satellite TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Satellite TrackerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D9741F9238CCEEF00C99815 /* Satellite_TrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Satellite_TrackerTests.swift; sourceTree = "<group>"; };
+		5D9741FB238CCEEF00C99815 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5DF2CB15237B92E5004005B1 /* NearbySatellite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbySatellite.swift; sourceTree = "<group>"; };
 		5E9EA2EC786D5F18BC8C61E8 /* Pods-Satellite Tracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Satellite Tracker.release.xcconfig"; path = "Target Support Files/Pods-Satellite Tracker/Pods-Satellite Tracker.release.xcconfig"; sourceTree = "<group>"; };
 		B6BA793F2373EB6E0036EE57 /* Beacon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beacon.swift; sourceTree = "<group>"; };
 		B6BA79412373EBE20036EE57 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
+		C5ECF8173F5BB0854BDCFE8D /* libPods-Satellite TrackerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Satellite TrackerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +75,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5D9741F4238CCEEF00C99815 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FAB8461531E7E31C0B9E9D6 /* libPods-Satellite TrackerTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -66,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				5D020CBC234A9F660078864C /* Satellite Tracker */,
+				5D9741F8238CCEEF00C99815 /* Satellite TrackerTests */,
 				5D020CBB234A9F660078864C /* Products */,
 				EE92F946EAC60D4FE64E834A /* Pods */,
 				ED2AFD45655AB76508709A23 /* Frameworks */,
@@ -76,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				5D020CBA234A9F660078864C /* Satellite Tracker.app */,
+				5D9741F7238CCEEF00C99815 /* Satellite TrackerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,13 +159,21 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		5D9741F8238CCEEF00C99815 /* Satellite TrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				5D9741F9238CCEEF00C99815 /* Satellite_TrackerTests.swift */,
+				5D9741FB238CCEEF00C99815 /* Info.plist */,
+			);
+			path = "Satellite TrackerTests";
+			sourceTree = "<group>";
+		};
 		5DCA2667236E991F003C299D /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				5DF2CB15237B92E5004005B1 /* NearbySatellite.swift */,
 				B6BA793F2373EB6E0036EE57 /* Beacon.swift */,
 				B6BA79412373EBE20036EE57 /* Path.swift */,
-				5D198A4B2374821A0023EEAD /* NearbySatellite.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -148,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				388436E9B1B7DE8ADDBDB2C1 /* libPods-Satellite Tracker.a */,
+				C5ECF8173F5BB0854BDCFE8D /* libPods-Satellite TrackerTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -157,6 +192,8 @@
 			children = (
 				1B008A74C157C2BAF85932A4 /* Pods-Satellite Tracker.debug.xcconfig */,
 				5E9EA2EC786D5F18BC8C61E8 /* Pods-Satellite Tracker.release.xcconfig */,
+				0D7380C8E8DEC178AB4B0A5D /* Pods-Satellite TrackerTests.debug.xcconfig */,
+				2530ADFB6763571443A52F65 /* Pods-Satellite TrackerTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -182,17 +219,40 @@
 			productReference = 5D020CBA234A9F660078864C /* Satellite Tracker.app */;
 			productType = "com.apple.product-type.application";
 		};
+		5D9741F6238CCEEF00C99815 /* Satellite TrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D974200238CCEEF00C99815 /* Build configuration list for PBXNativeTarget "Satellite TrackerTests" */;
+			buildPhases = (
+				D3A84B3ABF312B0F75328BBE /* [CP] Check Pods Manifest.lock */,
+				5D9741F3238CCEEF00C99815 /* Sources */,
+				5D9741F4238CCEEF00C99815 /* Frameworks */,
+				5D9741F5238CCEEF00C99815 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5D9741FD238CCEEF00C99815 /* PBXTargetDependency */,
+			);
+			name = "Satellite TrackerTests";
+			productName = "Satellite TrackerTests";
+			productReference = 5D9741F7238CCEEF00C99815 /* Satellite TrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		5D020CB2234A9F660078864C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1100;
+				LastSwiftUpdateCheck = 1120;
 				LastUpgradeCheck = 1100;
 				TargetAttributes = {
 					5D020CB9234A9F660078864C = {
 						CreatedOnToolsVersion = 11.0;
+					};
+					5D9741F6238CCEEF00C99815 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 5D020CB9234A9F660078864C;
 					};
 				};
 			};
@@ -210,6 +270,7 @@
 			projectRoot = "";
 			targets = (
 				5D020CB9234A9F660078864C /* Satellite Tracker */,
+				5D9741F6238CCEEF00C99815 /* Satellite TrackerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -222,6 +283,13 @@
 				5D020CCA234A9F680078864C /* LaunchScreen.storyboard in Resources */,
 				5D020CC7234A9F680078864C /* Assets.xcassets in Resources */,
 				5D020CC5234A9F660078864C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D9741F5238CCEEF00C99815 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +318,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D3A84B3ABF312B0F75328BBE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Satellite TrackerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -266,14 +356,29 @@
 				5D85137D236E495C00702BB3 /* NetworkManager.swift in Sources */,
 				5DF2CB16237B92E5004005B1 /* NearbySatellite.swift in Sources */,
 				5D687D4F2366339900A8A812 /* SatalliteModal.swift in Sources */,
-				5D198A4C2374821A0023EEAD /* NearbySatellite.swift in Sources */,
 				5D851382236E4B0600702BB3 /* EndPointType.swift in Sources */,
 				B6BA79402373EB6E0036EE57 /* Beacon.swift in Sources */,
 				5D85137F236E499E00702BB3 /* SatelliteEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5D9741F3238CCEEF00C99815 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D9741FA238CCEEF00C99815 /* Satellite_TrackerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5D9741FD238CCEEF00C99815 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5D020CB9234A9F660078864C /* Satellite Tracker */;
+			targetProxy = 5D9741FC238CCEEF00C99815 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5D020CC3234A9F660078864C /* Main.storyboard */ = {
@@ -447,6 +552,48 @@
 			};
 			name = Release;
 		};
+		5D9741FE238CCEEF00C99815 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D7380C8E8DEC178AB4B0A5D /* Pods-Satellite TrackerTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Satellite TrackerTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sattracker.Satellite-TrackerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Satellite Tracker.app/Satellite Tracker";
+			};
+			name = Debug;
+		};
+		5D9741FF238CCEEF00C99815 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2530ADFB6763571443A52F65 /* Pods-Satellite TrackerTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Satellite TrackerTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sattracker.Satellite-TrackerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Satellite Tracker.app/Satellite Tracker";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -464,6 +611,15 @@
 			buildConfigurations = (
 				5D020CCF234A9F680078864C /* Debug */,
 				5D020CD0234A9F680078864C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D974200238CCEEF00C99815 /* Build configuration list for PBXNativeTarget "Satellite TrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D9741FE238CCEEF00C99815 /* Debug */,
+				5D9741FF238CCEEF00C99815 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
