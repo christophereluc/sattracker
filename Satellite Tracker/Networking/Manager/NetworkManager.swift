@@ -86,7 +86,7 @@ struct NetworkManager {
         }
     }
 
-    func getBeacons(id: Int, completion: @escaping (_ data: BeaconResponse?,_ error: String?)->()){
+    func getBeacons(id: Int, completion: @escaping (_ data: Beacon?,_ error: String?)->()){
         router.request(.beacons(id: id)) { data, response, error in
             //Error isn't nil; therefore network errors
             if error != nil {
@@ -108,7 +108,8 @@ struct NetworkManager {
                         let responseData = try JSONDecoder().decode(BeaconResponse.self, from: responseData)
 
                         //MARK pass in data object into completion handler
-                        completion(responseData ,nil)
+                        print(responseData)
+                        completion(responseData.data ,nil)
                     } catch {
                         completion(nil, "Error decoding data - \(error)")
                     }

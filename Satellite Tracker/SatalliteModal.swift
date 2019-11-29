@@ -10,13 +10,15 @@ import CoreLocation
 
 class ModalViewController: UIViewController {
 
-    @IBOutlet var text: UITextView?
+    var text:String = ""
+    @IBOutlet var textLabel: UITextView?
     
-    var location: CLLocation?
+//    var location: CLLocation?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        text?.text = "\(location!)"
+        textLabel?.text = "\(String(describing: text))"
     }
 }
