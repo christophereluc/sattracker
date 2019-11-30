@@ -30,31 +30,9 @@ class ViewController: UIViewController {
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         
         setupBasicARScene()
-        //networkMonitor.pathUpdateHandler = handleNetworkChange(path:)
         networkMonitor.pathUpdateHandler = handleNetworkChange(path:)
         
-        /*let fakeSatellite = NearbySatellite(satid: 7530, satname: "OSCAR 7", intDesignator: "1974-089B", launchDate: "1974-11-15", satUplink: "", satDownlink: "2304.100", satMode: "D(RTTY)", satBeacon: "435.100", satlat: 6.3347, satlng: -102.9784, satalt: 1442.4108)*/
-        
-        //Didn't know what to put here
-        networkManager.getBeacons(id: NearbySatellite?.satid) { (response, error) in
-            let coordinate = CLLocationCoordinate2D(latitude: nearbySatellite.satlat, longitude: nearbySatellite.satlng)
-            let location = CLLocation(coordinate: coordinate, altitude: (nearbySatellite.satalt * 1000))
-            DispatchQueue.main.async {
-                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let newViewController = storyBoard.instantiateViewController(withIdentifier: "modalViewController") as! ModalViewController
-               newViewController.beacon = response
-                self.present(newViewController, animated: true, completion: nil)
-            }
-        }
-    }/*override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-        
-        setupBasicARScene()
-        
-    }*/
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -135,7 +113,7 @@ extension ViewController: LNTouchDelegate {
                 DispatchQueue.main.async {
                     let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                     let newViewController = storyBoard.instantiateViewController(withIdentifier: "modalViewController") as! ModalViewController
-                    newViewController.text = response?.description ?? "unknown"
+                    newViewController.beacon = response
                     self.present(newViewController, animated: true, completion: nil)
                 }
             }

@@ -27,9 +27,8 @@ class ModalViewController: UIViewController {
     @IBOutlet weak var Sat_Callsign: UILabel!
     
     @IBOutlet weak var Sat_Mode: UILabel!
-    //    var location: CLLocation?
+
     var beacon: Beacon?
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
