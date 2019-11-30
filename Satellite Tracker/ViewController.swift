@@ -31,6 +31,7 @@ class ViewController: UIViewController {
         
         setupBasicARScene()
         networkMonitor.pathUpdateHandler = handleNetworkChange(path:)
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -112,7 +113,7 @@ extension ViewController: LNTouchDelegate {
                 DispatchQueue.main.async {
                     let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                     let newViewController = storyBoard.instantiateViewController(withIdentifier: "modalViewController") as! ModalViewController
-                    newViewController.text = response?.description ?? "unknown"
+                    newViewController.beacon = response
                     self.present(newViewController, animated: true, completion: nil)
                 }
             }
