@@ -247,7 +247,7 @@ extension ViewController: CLLocationManagerDelegate {
         //If old timer isn't null, invalidate it
         timer?.invalidate()
         //Start a new timer
-        timer = Timer.scheduledTimer(withTimeInterval: 120, repeats: true, block: updateSatellites(timer:))
+        timer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true, block: updateSatellites(timer:))
         //Immediately fire the timer so that we can get our first set of data
         timer?.fire()
     }
@@ -286,6 +286,7 @@ extension ViewController {
             print("no network connection")
         }
         else if let location = locationManager.location {
+            print("Updating satellites")
             networkManager.getNearbySatellites(location: location, completion: handleNearbySatelliteResults(data:error:))
         }
         else {

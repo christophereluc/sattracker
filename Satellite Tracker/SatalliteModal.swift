@@ -19,7 +19,6 @@ class ModalViewController: UIViewController {
     
     @IBOutlet weak var Sat_Uplink: UILabel!
     
-    
     @IBOutlet weak var Sat_Downlink: UILabel!
     
     @IBOutlet weak var Sat_Beacon: UILabel!
@@ -33,7 +32,13 @@ class ModalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Sat_ID.text = String(describing:beacon?.satid)
+        if let id = beacon?.satid {
+            Sat_ID.text = "\(id)"
+        }
+        else {
+            Sat_ID.text = ""
+        }
+        
         Sat_Name.text = beacon?.name
         
         Sat_Beacon.text = beacon?.beacon
