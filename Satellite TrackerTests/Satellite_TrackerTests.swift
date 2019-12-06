@@ -25,7 +25,7 @@ class Satellite_TrackerTests: XCTestCase {
     
     
     let nearbyJson = Data("""
-    {"data": {"satellites": [{"satid": 14129, "satname": "OSCAR 10", "intDesignator": "1983-058B", "launchDate": "1983-06-16", "satlat": 21.046, "satlng": -170.4703, "satalt": 21025.7089}], "iss": {"satid": 26609, "satname": "AMSAT OSCAR 40", "intDesignator": "2000-072B", "launchDate": "2000-11-16", "satlat": -9.3149, "satlng": -157.4545, "satalt": 58662.0491}}}
+    {"data": {"satellites": [{"satid": 44330, "satname": "RAAVANA1", "intDesignator": "1998-067QF", "launchDate": "1998-11-20", "satlat": 51.6316, "satlng": -118.4669, "satalt": 409.2799, "uplink": "", "downlink": "437.375", "beacon": "437.375", "mode": "4800bps GMSK CW"}], "iss": {"satid": 43678, "satname": "DIWATA 2B (PO-101)", "intDesignator": "2018-084H", "launchDate": "2018-10-29", "satlat": 32.1231, "satlng": -144.1986, "satalt": 592.3276, "uplink": "437.500", "downlink": "145.900", "beacon": "145.900", "mode": "FM APRS Digipeater CW"}}}
     """.utf8)
     
     func testCreateNearbySatelliteFromJson() {
@@ -34,21 +34,29 @@ class Satellite_TrackerTests: XCTestCase {
         XCTAssertNotNil(data.data)
         XCTAssertNotNil(data.data.satellites)
         XCTAssertEqual(data.data.satellites.count, 1)
-        XCTAssertEqual(data.data.satellites[0].satid, 14129)
-        XCTAssertEqual(data.data.satellites[0].satname, "OSCAR 10")
-        XCTAssertEqual(data.data.satellites[0].intDesignator, "1983-058B")
-        XCTAssertEqual(data.data.satellites[0].launchDate, "1983-06-16")
-        XCTAssertEqual(data.data.satellites[0].satlat, 21.046)
-        XCTAssertEqual(data.data.satellites[0].satlng, -170.4703)
-        XCTAssertEqual(data.data.satellites[0].satalt, 21025.7089)
+        XCTAssertEqual(data.data.satellites[0].satid, 44330)
+        XCTAssertEqual(data.data.satellites[0].satname, "RAAVANA1")
+        XCTAssertEqual(data.data.satellites[0].intDesignator, "1998-067QF")
+        XCTAssertEqual(data.data.satellites[0].launchDate, "1998-11-20")
+        XCTAssertEqual(data.data.satellites[0].satlat, 51.6316)
+        XCTAssertEqual(data.data.satellites[0].satlng, -118.4669)
+        XCTAssertEqual(data.data.satellites[0].satalt, 409.2799)
+        XCTAssertEqual(data.data.satellites[0].satUplink, "")
+        XCTAssertEqual(data.data.satellites[0].satDownlink, "437.375")
+        XCTAssertEqual(data.data.satellites[0].satBeacon, "437.375")
+        XCTAssertEqual(data.data.satellites[0].satMode, "4800bps GMSK CW")
         XCTAssertNotNil(data.data.iss)
-        XCTAssertEqual(data.data.iss!.satid, 26609)
-        XCTAssertEqual(data.data.iss!.satname, "AMSAT OSCAR 40")
-        XCTAssertEqual(data.data.iss!.intDesignator, "2000-072B")
-        XCTAssertEqual(data.data.iss!.launchDate, "2000-11-16")
-        XCTAssertEqual(data.data.iss!.satlat, -9.3149)
-        XCTAssertEqual(data.data.iss!.satlng, -157.4545)
-        XCTAssertEqual(data.data.iss!.satalt, 58662.0491)
+        XCTAssertEqual(data.data.iss!.satid, 43678)
+        XCTAssertEqual(data.data.iss!.satname, "DIWATA 2B (PO-101)")
+        XCTAssertEqual(data.data.iss!.intDesignator, "2018-084H")
+        XCTAssertEqual(data.data.iss!.launchDate, "2018-10-29")
+        XCTAssertEqual(data.data.iss!.satlat, 32.1231)
+        XCTAssertEqual(data.data.iss!.satlng, -144.1986)
+        XCTAssertEqual(data.data.iss!.satalt, 592.3276)
+        XCTAssertEqual(data.data.iss!.satUplink, "437.500")
+        XCTAssertEqual(data.data.iss!.satDownlink, "145.900")
+        XCTAssertEqual(data.data.iss!.satBeacon, "145.900")
+        XCTAssertEqual(data.data.iss!.satMode, "FM APRS Digipeater CW")
     }
     
 }
